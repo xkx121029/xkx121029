@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GitHub Profile README · 本地素材版预览</title>
+<style>
+  :root{
+    --bg:#010409; --canvas:#0d1117; --card:#161b22; --border:#30363d;
+    --fg:#e6edf3; --muted:#8b949e; --blue:#4493f8; --purple:#a371f7;
+    --green:#3fb950; --amber:#d29922;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;padding:32px 16px 64px}
+  .page{max-width:1000px;margin:0 auto}
+  .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+  .eyebrow{color:var(--muted);font-size:13px}.eyebrow b{color:var(--fg)}
+  .ok{color:var(--green);font-weight:650}
+  .links{display:flex;gap:8px;flex-wrap:wrap}
+  .ghost-btn{display:inline-flex;align-items:center;gap:6px;color:var(--fg);text-decoration:none;font-size:13px;background:#21262d;border:1px solid var(--border);padding:7px 12px;border-radius:7px}
+  .ghost-btn:hover{background:#30363d;border-color:#8b949e}
+  .file{border:1px solid var(--border);border-radius:8px;background:var(--canvas);overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.45)}
+  .file-head{display:flex;align-items:center;gap:10px;padding:11px 16px;background:var(--card);border-bottom:1px solid var(--border);font-size:13px;color:var(--muted)}
+  .file-head strong{color:var(--fg);font-weight:600}.file-head .spacer{flex:1}
+  .readme{padding:30px 40px 28px}
+  @media(max-width:640px){.readme{padding:22px 18px}}
+  h1{font-size:32px;margin:8px 0 14px;font-weight:750;text-align:center}
+  h2{font-size:21px;font-weight:650;border-bottom:1px solid var(--border);padding-bottom:8px;margin:32px 0 16px}
+  h3{font-size:17px;font-weight:650;margin:24px 0 10px}
+  .center{text-align:center}
+  .avatar{width:108px;height:108px;border-radius:50%;border:1px solid var(--border)}
+  .typing{width:380px;max-width:100%;margin-top:10px}
+  .badges{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;margin:2px 0 18px}
+  .badges img,.tagrow img{height:20px}
+  .tagline{border-left:4px solid #6e7681;color:var(--muted);padding:6px 16px;margin:0 0 14px;font-size:16px}
+  .tagline strong{color:var(--fg)}
+  .hr{height:1px;background:var(--border);margin:26px 0;border:0}
+  p{margin:10px 0}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+  code{background:rgba(110,118,129,.28);padding:2px 6px;border-radius:5px;font:12.5px ui-monospace,Consolas,monospace}
+  ul{padding-left:24px;margin:10px 0}li{margin:7px 0}
+  .alert{border-left:4px solid;border-radius:0 8px 8px 0;padding:14px 18px;margin:16px 0;background:rgba(110,118,129,.06);font-size:14px}
+  .alert .label{font-size:12px;font-weight:700;letter-spacing:.05em;margin-bottom:6px}
+  .alert.important{border-color:var(--purple);background:rgba(163,113,247,.08)}.alert.important .label{color:var(--purple)}
+  .alert.note{border-color:var(--blue);background:rgba(68,147,248,.07)}.alert.note .label{color:var(--blue)}
+  .og-main{width:600px;max-width:100%;border:1px solid var(--border);border-radius:8px;display:block;margin:14px 0 10px;transition:box-shadow .2s}
+  .og-main:hover{box-shadow:0 0 0 2px rgba(68,147,248,.5)}
+  .og-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 6px}
+  @media(max-width:700px){.og-grid{grid-template-columns:1fr}}
+  .og-grid a{display:block}.og-grid img{width:100%;border:1px solid var(--border);border-radius:8px;display:block;transition:box-shadow .2s}
+  .og-grid a:hover img{box-shadow:0 0 0 2px rgba(68,147,248,.5)}
+  sub{color:var(--muted);font-size:12px}
+  .icons{width:740px;max-width:100%;display:block;margin:14px auto 16px}
+  .tagrow{display:flex;gap:5px;flex-wrap:wrap;margin:10px 0 18px}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;display:block;overflow-x:auto}
+  th,td{border:1px solid var(--border);padding:9px 13px;text-align:left;vertical-align:top}
+  th{background:var(--card);font-weight:650}tr:nth-child(2n) td{background:rgba(110,118,129,.06)}
+  .streak{width:495px;max-width:100%;margin:8px 0 18px;border-radius:8px}
+  details{border:1px solid var(--border);border-radius:7px;padding:12px 16px;margin:18px 0;background:rgba(110,118,129,.05)}
+  summary{cursor:pointer;font-weight:650;color:var(--blue)}
+  pre{background:#010409;border:1px solid var(--border);border-radius:7px;padding:14px;overflow-x:auto;font:12.5px/1.6 ui-monospace,Consolas,monospace;color:#c9d1d9}
+  .repo-group{margin:14px 0 6px;font-size:13px;font-weight:650}
+  .repo-links a{display:inline-block;font-size:12px;padding:3px 9px;margin:3px 5px 3px 0;border:1px solid var(--border);border-radius:12px;background:var(--card)}
+  .footer-note{text-align:center;color:var(--muted);font-size:12px;margin-top:26px}
+  .notes{margin-top:26px;border:1px dashed #6e5a2e;background:rgba(187,128,9,.07);border-radius:8px;padding:18px 22px}
+  .notes h4{margin:0 0 10px;font-size:14px;color:var(--amber)}
+  .notes ul{margin:0;padding-left:20px;font-size:13px;color:var(--muted)}
+  .notes li{margin:5px 0}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar">
+    <div class="eyebrow">本地素材版预览 · <b>xkx121029 / xkx121029</b> · <span class="ok">30 张图片本地托管 · 每 6 小时自动刷新</span></div>
+    <div class="links">
+      <a class="ghost-btn" href="README.md">README.md</a>
+      <a class="ghost-btn" href="assets.html">素材合集</a>
+      <a class="ghost-btn" href="README-plain.md">纯文本兜底版</a>
+      <a class="ghost-btn" href="README-rich.md">旧富卡片版</a>
+    </div>
+  </div>
+
+  <div class="file">
+    <div class="file-head">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="#8b949e"><path d="M2 1.75C2 .784 2.784 0 3.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 12.25 16h-8.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25V5h-2.75A1.75 1.75 0 0 1 8 3.25V1.5Zm5.75.81V3.25c0 .138.112.25.25.25h1.69Z"/></svg>
+      <strong>README.md</strong><span class="spacer"></span><span>xkx121029 / xkx121029</span>
+    </div>
+
+    <div class="readme">
+      <div class="center">
+        <img class="avatar" src="./assets/avatar.jpg" alt="avatar"><br>
+        <img class="typing" src="./assets/typing.svg" alt="happy~happy~happy~">
+      </div>
+      <h1>👋 Hi, I'm xkx121029</h1>
+      <div class="badges">
+        <img src="./assets/badge-repos.svg" alt="repos"><img src="./assets/badge-forks.svg" alt="forks"><img src="./assets/badge-stars.svg" alt="stars">
+        <img src="./assets/badge-starstruck.svg" alt="Starstruck x2"><img src="./assets/badge-dalian.svg" alt="Dalian">
+        <img src="./assets/badge-self-hosted.svg" alt="self-hosted"><img src="./assets/visitors.svg" alt="views">
+      </div>
+      <div class="tagline"><strong>happy～happy～happy～　·　自托管玩家　·　什么都想自己整一个</strong></div>
+
+      <div class="alert important"><div class="label">🚀 IMPORTANT</div><b>NOW</b> · 正在推 <b>Happy Phone Agent</b> 和 <b>HappyClaw</b></div>
+
+      <h2>🎯 主推项目</h2>
+      <h3>🤖 Happy Phone Agent</h3>
+      <div class="tagrow"><img src="./assets/badge-kotlin.svg"><img src="./assets/badge-android.svg"><img src="./assets/badge-ai-agent.svg"></div>
+      <p>基于 AI 的 Android 智能体，自动操控手机完成复杂任务。</p>
+      <a href="https://github.com/xkx121029/Phtomt"><img class="og-main" src="./assets/og-Phtomt.png" alt="Phtomt 仓库预览"></a>
+      <p><b>→ <a href="https://github.com/xkx121029/Phtomt">github.com/xkx121029/Phtomt</a></b> · ⭐ 3 stars</p>
+
+      <h3>🦀 HappyClaw</h3>
+      <div class="tagrow"><img src="./assets/badge-wip.svg"><img src="./assets/badge-coming-soon.svg"></div>
+      <div class="alert note"><div class="label">📝 NOTE</div>下一个主推项目，正在整。GitHub 上暂时查不到公开仓库，<b>先占位、不编链接</b>，开源了立刻补上。</div>
+
+      <hr class="hr"><h2>🖼 项目掠影</h2>
+      <div class="og-grid">
+        <a href="https://github.com/xkx121029/happy-search"><img src="./assets/og-happy-search.png" alt="happy-search"></a>
+        <a href="https://github.com/xkx121029/happy-relay"><img src="./assets/og-happy-relay.png" alt="happy-relay"></a>
+        <a href="https://github.com/xkx121029/AioShell"><img src="./assets/og-AioShell.png" alt="AioShell"></a>
+        <a href="https://github.com/xkx121029/HappyLook"><img src="./assets/og-HappyLook.png" alt="HappyLook"></a>
+      </div>
+      <sub>↑ 图片是 GitHub 官方生成的仓库社交预览卡，点图直达仓库。已下载到本地，不依赖第三方服务。</sub>
+
+      <hr class="hr"><h2>👋 关于我</h2>
+      <p>大连，一个人把想法从 0 整到能跑。30 个开源项目，几乎全是从零起的，<strong>名字基本都以 happy 开头</strong>。</p>
+      <ul>
+        <li>🧠 <strong>给 AI 造工具</strong>：自托管搜索 API（14 引擎聚合 + RRF 融合排序）、OpenAI 兼容模型中转、内置 MCP / ACP 的网盘工作区、能自己操控手机的 Android 智能体</li>
+        <li>📱 <strong>客户端全线</strong>：Kotlin / Jetpack Compose、C# / WPF、Tauri 2 + Vue、Flutter、纯 Rust 写的 Windows TSF 编程输入法</li>
+        <li>🖥 <strong>自托管 &amp; 运维</strong>：私有云盘、统一身份枢纽（OIDC / Ed25519 / WebRTC 信令）、ARM64 上用 Docker + QEMU 跑 Windows</li>
+        <li>🎮 <strong>也写玩具</strong>：Three.js 单文件 2.5D 农场、3D 自动驾驶训练、AI 闯关、代码动画生成器</li>
+        <li>🧩 偏好很固定：<strong>零依赖、单文件、双击即玩、自己能托管</strong>；先跑通再抠体验，UI 不漂亮不收工</li>
+      </ul>
+      <div class="tagline">一句话总结：<strong>「能不能自己整一个？」——能，就整了。</strong></div>
+
+      <hr class="hr"><h2>🧰 技术栈</h2>
+      <img class="icons" src="./assets/skillicons-dark.svg" alt="tech stack icons">
+      <div class="tagrow">
+        <img src="./assets/badge-python.svg"><img src="./assets/badge-rust.svg"><img src="./assets/badge-go.svg"><img src="./assets/badge-cpp.svg">
+        <img src="./assets/badge-vue.svg"><img src="./assets/badge-tauri.svg"><img src="./assets/badge-docker.svg"><img src="./assets/badge-mcp.svg">
+      </div>
+      <table>
+        <thead><tr><th>领域</th><th>用到的东西</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AI / 给 AI 用的基建</strong></td><td>零 API Key 搜索 API（14 引擎 + RRF 融合排序）、OpenAI 兼容中转、MCP / ACP / REST 端点、OIDC / Ed25519 许可证、WebRTC 信令</td></tr>
+          <tr><td><strong>后端</strong></td><td>Python、Go（单文件二进制 + 内嵌 Web 面板）、Node.js（含 <code>node:sqlite</code>）、Gin</td></tr>
+          <tr><td><strong>桌面 / 移动</strong></td><td>Kotlin + Jetpack Compose、C# / WPF（.NET 8 + SkiaSharp）、Tauri 2 + Vue、Flutter / Dart、Rust + <code>windows-rs</code>、C++</td></tr>
+          <tr><td><strong>前端 / 3D</strong></td><td>HTML / JS / TS、Three.js、WebView、纯前端零构建、React + Vite + TailwindCSS</td></tr>
+          <tr><td><strong>基建运维</strong></td><td>Docker、ARM64、QEMU + QMP + noVNC、P2P / 局域网同步、私有云、WebRTC</td></tr>
+          <tr><td><strong>代码工具</strong></td><td>Compose 源码 → 统一 IR → 浏览器渲染、代码 → 编写动画 → 导出视频</td></tr>
+        </tbody>
+      </table>
+
+      <hr class="hr"><h2>📊 数据 &amp; 项目版图</h2>
+      <img class="streak" src="./assets/streak.svg" alt="contribution streak">
+      <table><thead><tr><th>🤖 AI &amp; 智能体</th><th>🔧 自托管 / 基建</th></tr></thead><tbody><tr><td><b>5</b> 个项目<br><code>Phtomt</code> · <code>AioShell</code> · <code>HappyBrowser</code></td><td><b>10</b> 个项目<br><code>happy-search</code> · <code>happy-relay</code> · <code>happy-one</code> · <code>wharf</code></td></tr></tbody></table>
+      <table><thead><tr><th>📱 Android / 客户端</th><th>🖥 桌面 / 工具</th></tr></thead><tbody><tr><td><b>5</b> 个项目<br><code>HappyLook</code> · <code>Clapper</code> · <code>happy_potplayer</code></td><td><b>6</b> 个项目<br><code>happy_clean</code> · <code>happy_shurufa</code> · <code>exam-bell</code></td></tr></tbody></table>
+      <table><thead><tr><th>🎮 3D / 小游戏</th><th>🌐 Web / CMS</th></tr></thead><tbody><tr><td><b>3</b> 个项目<br><code>windfield-farm</code> · <code>AI_car</code> · <code>ai-chuangguan</code></td><td><b>1</b> 个项目<br><code>happy_home</code></td></tr></tbody></table>
+      <details><summary>🗺 项目关系图（GitHub 网页端原生渲染，展开可见）</summary><pre>```mermaid
+flowchart LR
+  ME["xkx121029"] --&gt; AI["AI / 智能体 · 5"]
+  ME --&gt; SELF["自托管 / 基建 · 10"]
+  ME --&gt; MOBILE["Android / 客户端 · 5"]
+  ME --&gt; DESK["桌面 / 工具 · 6"]
+  ME --&gt; GAME["3D / 小游戏 · 3"]
+  ME --&gt; WEB["Web / CMS · 1"]
+```</pre><sub>本地预览器不渲染 Mermaid，这里显示源码；GitHub 网页端会自动画成流程图。</sub></details>
+
+      <hr class="hr"><h2>📦 全部项目</h2>
+      <details><summary>展开全部 30 个开源项目</summary>
+        <div class="repo-group">🎯 主推</div><div class="repo-links"><a href="https://github.com/xkx121029/Phtomt">Happy Phone Agent / Phtomt</a>　<code>HappyClaw · 仓库待补</code></div>
+        <div class="repo-group">🤖 AI &amp; 智能体</div><div class="repo-links"><a href="https://github.com/xkx121029/Phtomt">Phtomt</a><a href="https://github.com/xkx121029/AioShell">AioShell</a><a href="https://github.com/xkx121029/HappyBrowser">HappyBrowser</a><a href="https://github.com/xkx121029/happy_android_ai_see">happy_android_ai_see</a><a href="https://github.com/xkx121029/runtime-console">runtime-console</a></div>
+        <div class="repo-group">🔧 自托管 / 基建</div><div class="repo-links"><a href="https://github.com/xkx121029/happy-search">happy-search</a><a href="https://github.com/xkx121029/happy-relay">happy-relay</a><a href="https://github.com/xkx121029/happy-one">happy-one</a><a href="https://github.com/xkx121029/wharf">wharf</a><a href="https://github.com/xkx121029/happy_html_puter">happy_html_puter</a><a href="https://github.com/xkx121029/happy-app-market">happy-app-market</a><a href="https://github.com/xkx121029/happy-cloud">happy-cloud</a><a href="https://github.com/xkx121029/happy-linux-win">happy-linux-win</a><a href="https://github.com/xkx121029/happy_yuankong">happy_yuankong</a><a href="https://github.com/xkx121029/xmtb">xmtb</a></div>
+        <div class="repo-group">📱 Android / 客户端</div><div class="repo-links"><a href="https://github.com/xkx121029/HappyLook">HappyLook</a><a href="https://github.com/xkx121029/Clapper">Clapper</a><a href="https://github.com/xkx121029/happy_andorid_html_quickook">happy_andorid_html_quickook</a><a href="https://github.com/xkx121029/happy_potplayer">happy_potplayer</a><a href="https://github.com/xkx121029/baike_reformat">baike_reformat</a></div>
+        <div class="repo-group">🖥 桌面 / 工具</div><div class="repo-links"><a href="https://github.com/xkx121029/happy_clean">happy_clean</a><a href="https://github.com/xkx121029/happy-whiteboard">happy-whiteboard</a><a href="https://github.com/xkx121029/happy_shurufa">happy_shurufa</a><a href="https://github.com/xkx121029/exam-bell">exam-bell</a><a href="https://github.com/xkx121029/kompose-studio">kompose-studio</a><a href="https://github.com/xkx121029/code-reel">code-reel</a></div>
+        <div class="repo-group">🎮 3D / 小游戏</div><div class="repo-links"><a href="https://github.com/xkx121029/windfield-farm">windfield-farm</a><a href="https://github.com/xkx121029/ai-chuangguan">ai-chuangguan</a><a href="https://github.com/xkx121029/AI_car">AI_car</a></div>
+        <div class="repo-group">🌐 Web / CMS</div><div class="repo-links"><a href="https://github.com/xkx121029/happy_home">happy_home</a></div>
+      </details>
+
+      <hr class="hr"><h2>📫 找得到我</h2>
+      <ul>
+        <li>🌐 <strong>个人站</strong> → <a href="https://linshuxu.pages.dev">https://linshuxu.pages.dev</a></li>
+        <li>📺 <strong>B 站</strong> → <a href="https://space.bilibili.com/3546846012115408">space.bilibili.com/3546846012115408</a></li>
+        <li>💬 <strong>QQ 号</strong> → <a href="https://qm.qq.com/q/e0EttbDdyU">qm.qq.com/q/e0EttbDdyU</a></li>
+        <li>💡 自托管、AI 基建、Android / 桌面，以及一切「能不能自己整一个」的话题，开 Issue 聊就行</li>
+      </ul>
+      <div class="footer-note">⚡ 30 repos · mostly named happy · all built from scratch.</div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <h4>⚠️ 这版和上一版的区别（预览页专用，不会出现在 README 里）</h4>
+    <ul>
+      <li><b>持续更新</b>：<code>.github/workflows/refresh-assets.yml</code> 每 6 小时在 GitHub Actions 的境外 runner 上跑 <code>scripts/refresh-assets.mjs</code>，重抓访客数 / 连续提交 / 官方仓库封面，并按 GitHub API 实时数据重生成「项目数 / fork / star」徽章；只有内容变化才提交，README 里的 <code>?v=</code> 版本号同步更新用于破图片缓存。也能在 Actions 页面手动触发。</li>
+      <li><b>做法换了</b>：不再手写 SVG，也不再让页面实时请求第三方图片服务 —— 把服务生成的图片<b>全部下载到 <code>assets/</code></b>，README 用该目录下的相对路径引用。GitHub 自家域名加载，能打开 GitHub 就能显示。</li>
+      <li><b>实测能下</b>：shields.io 最简徽章 18 张、skillicons 明暗图标条、streak 连续提交卡、komarev 访客计数、readme-typing-svg 打字机、GitHub 官方头像 + 5 张官方仓库 OG 封面。</li>
+      <li><b>实测放弃</b>：capsule-render、github-readme-stats、activity-graph（vercel 系全 000）、gh-card.dev、ghchart；所以没有头图 / 统计总卡 / 贡献图，改用 GitHub 原生 Alert + 表格 + 折叠 Mermaid 顶上。</li>
+      <li><b>注意</b>：访客数、连续提交、仓库封面都是<b>下载瞬间的快照</b>，不会自动更新；OG 图曾遇 429 限流，换缓存 key 后补齐。全部 29 个素材见 <a href="assets.html">assets.html</a>。</li>
+      <li><b>上线</b>：把 <code>README.md</code> + 整个 <code>assets/</code> 目录一起推到 <code>xkx121029/xkx121029</code> 根目录。纯文本零图兜底版在 <code>README-plain.md</code>。</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

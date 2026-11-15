@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>README 素材合集 · xkx121029</title>
+<style>
+  :root{
+    --bg:#010409; --canvas:#0d1117; --card:#161b22; --border:#30363d;
+    --fg:#e6edf3; --muted:#8b949e; --blue:#4493f8; --purple:#a371f7;
+    --green:#3fb950; --amber:#d29922;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;padding:28px 16px 70px}
+  .wrap{max-width:1100px;margin:0 auto}
+  header{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px;justify-content:space-between;margin-bottom:22px}
+  h1{font-size:25px;margin:0 0 5px;font-weight:700}
+  .sub{color:var(--muted);font-size:13px}
+  .btn{background:#21262d;border:1px solid var(--border);color:var(--fg);padding:8px 14px;border-radius:7px;font-size:13px;cursor:pointer;text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+  .btn:hover{background:#30363d;border-color:#8b949e}
+  .btn.primary{background:rgba(68,147,248,.15);border-color:rgba(68,147,248,.5);color:#9ecbff}
+  .stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:11px 16px;min-width:130px}
+  .stat b{display:block;font-size:22px;color:var(--blue);line-height:1.2}
+  .stat span{font-size:12px;color:var(--muted)}
+  h2{font-size:16px;margin:30px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--border);font-weight:650}
+  h2 small{color:var(--muted);font-weight:400;font-size:12px;margin-left:8px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:12px}
+  .tile{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+  .preview{min-height:96px;padding:16px;background:repeating-conic-gradient(#0d1117 0% 25%,#11161f 0% 50%) 50%/18px 18px;display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;overflow:hidden}
+  .preview img{max-width:100%;max-height:150px;object-fit:contain;image-rendering:auto}
+  .preview.avatar img{border-radius:50%}
+  .meta{padding:10px 12px 12px;border-top:1px solid var(--border);flex:1}
+  .fname{font:12px/1.4 ui-monospace,Consolas,monospace;color:var(--fg);word-break:break-all}
+  .dim{font-size:11px;color:var(--muted);margin-top:3px}
+  .src{font-size:10px;color:#6e7681;margin-top:6px;word-break:break-all;line-height:1.4}
+  .tile .btn{margin-top:9px;padding:5px 9px;font-size:11px;align-self:flex-start}
+  .notes{margin-top:34px;border:1px dashed #6e5a2e;background:rgba(187,128,9,.07);border-radius:9px;padding:16px 20px;font-size:13px;color:var(--muted)}
+  .notes b{color:var(--amber)}
+  .notes ul{padding-left:20px;margin:8px 0 0}
+  .notes li{margin:5px 0}
+  code{background:rgba(110,118,129,.25);padding:1px 5px;border-radius:4px;font:12px ui-monospace,Consolas,monospace;color:var(--fg)}
+  .ok{color:var(--green)}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:#238636;color:#fff;padding:9px 18px;border-radius:8px;font-size:13px;opacity:0;transition:.25s;pointer-events:none}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>📦 README 素材合集</h1>
+      <div class="sub">全部为第三方服务生成的真实图片，已下载到 <code>./assets/</code> · 零外链 · 双击本页即可离线查看</div>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn" href="README.md">README.md</a>
+      <a class="btn" href="preview.html">效果预览</a>
+      <button class="btn primary" id="copyAll">⧉ 复制全部引用</button>
+    </div>
+  </header>
+
+  <div class="stats" id="stats"></div>
+  <div id="groups"></div>
+
+  <div class="notes">
+    <b>抓取说明（实测）</b>
+    <ul>
+      <li><b>🔄 自动刷新</b>：把 <code>.github/workflows/refresh-assets.yml</code> 和 <code>scripts/refresh-assets.mjs</code> 一起推到仓库，Actions 每 6 小时（也能手动触发）在境外 runner 上重抓动态素材并提交；只有内容变化才 commit，下载失败会保留旧图。本地可跑 <code>node scripts/refresh-assets.mjs</code>。README 图片后的 <code>?v=</code> 是脚本维护的缓存版本号，别手删。</li>
+      <li><span class="ok">✔ 能下</span>：<code>img.shields.io</code>（仅最简路径式 badge，带 <code>logo=</code> / <code>style=</code> 参数会超时）、<code>skillicons.dev</code>、<code>streak-stats.demolab.com</code>、<code>komarev.com</code>、<code>readme-typing-svg.demolab.com</code>、GitHub 自家 <code>github.com/xkx121029.png</code> 与 <code>opengraph.githubassets.com</code>。</li>
+      <li><b>✘ 放弃</b>：<code>capsule-render</code>、<code>github-readme-stats</code>、<code>activity-graph</code>（vercel 系全不通）、<code>gh-card.dev</code>、<code>ghchart.rshah.org</code>；OG 图偶发 <code>429</code> 限流，换缓存 key 重试后拿到 5 张。</li>
+      <li>动态卡（访客数 / 连续提交 / OG 预览 / 数字徽章）由 Actions <b>每 6 小时自动重抓</b>；静态徽章与图标条只在文件缺失时补齐。</li>
+      <li>上传时把整个 <code>assets/</code> 目录放到 <code>xkx121029/xkx121029</code> 仓库根目录，README 里的相对路径才会生效。</li>
+    </ul>
+  </div>
+</div>
+<div class="toast" id="toast">已复制</div>
+
+<script>
+const B='https://img.shields.io/badge/';
+const OG='https://opengraph.githubassets.com/*/xkx121029/';
+const groups=[
+  {title:'🏷 状态 / 标签徽章',note:'shields.io · 最简路径式',items:[
+    ['badge-python.svg','Python',B+'Python-3572A5'],['badge-kotlin.svg','Kotlin',B+'Kotlin-A97BFF'],
+    ['badge-android.svg','Android',B+'Android-3DDC84'],['badge-ai-agent.svg','AI Agent',B+'AI%20Agent-8A2BE2'],
+    ['badge-rust.svg','Rust',B+'Rust-DEA584'],['badge-go.svg','Go',B+'Go-00ADD8'],
+    ['badge-cpp.svg','C++',B+'C++-F34B7D'],['badge-vue.svg','Vue',B+'Vue-41B883'],
+    ['badge-wip.svg','WIP',B+'WIP-d29922'],['badge-coming-soon.svg','Coming Soon',B+'Coming%20Soon-3fb950'],
+    ['badge-repos.svg','实时项目数','GitHub API → '+B+'N%20repos-58a6ff'],['badge-forks.svg','实时 fork 数','GitHub API → '+B+'N%20forks-a371f7'],
+    ['badge-stars.svg','实时 star 总数','GitHub API → '+B+'N%20stars-f778ba'],
+    ['badge-starstruck.svg','Starstruck x2',B+'Starstruck%20x2-f778ba'],['badge-dalian.svg','Dalian',B+'Dalian-39c5cf'],
+    ['badge-self-hosted.svg','self-hosted',B+'self-hosted-238636'],['badge-mcp.svg','MCP / ACP',B+'MCP%20ACP-6f42c1'],
+    ['badge-docker.svg','Docker',B+'Docker-2496ED'],['badge-tauri.svg','Tauri 2',B+'Tauri2-FFC131']
+  ]},
+  {title:'🧰 技术栈图标条',note:'skillicons.dev · 明暗两版',items:[
+    ['skillicons-dark.svg','深色版','https://skillicons.dev/icons?i=py,kotlin,js,ts,html,go,rust,cpp,cs,dart,vue,threejs,tauri,docker&theme=dark'],
+    ['skillicons-light.svg','浅色版','https://skillicons.dev/icons?i=py,kotlin,js,ts,html,go,rust,cpp,cs,dart,vue,threejs,tauri,docker&theme=light']
+  ]},
+  {title:'📊 统计 / 动效',note:'静态快照',items:[
+    ['streak.svg','连续提交卡','https://streak-stats.demolab.com/?user=xkx121029'],
+    ['visitors.svg','访客计数','https://komarev.com/ghpvc/?username=xkx121029'],
+    ['typing.svg','打字机动效','https://readme-typing-svg.demolab.com/?lines=happy~happy~happy~']
+  ]},
+  {title:'🖼 官方仓库封面',note:'GitHub 自家 OG 图 · 点图进 README 可跳仓库',items:[
+    ['og-Phtomt.png','Happy Phone Agent',OG+'Phtomt'],
+    ['og-happy-search.png','happy-search',OG+'happy-search'],
+    ['og-happy-relay.png','happy-relay',OG+'happy-relay'],
+    ['og-AioShell.png','AioShell',OG+'AioShell'],
+    ['og-HappyLook.png','HappyLook',OG+'HappyLook']
+  ]},
+  {title:'👤 头像',note:'GitHub 官方头像',items:[
+    ['avatar.jpg','个人头像','https://github.com/xkx121029.png?size=240']
+  ]}
+];
+
+const all=groups.flatMap(g=>g.items.map(i=>i[0]));
+document.getElementById('stats').innerHTML=[
+  [all.length,'素材总数'],['5','来源服务'],['0','外链请求'],['100%','本地可用']
+].map(([n,t])=>`<div class="stat"><b>${n}</b><span>${t}</span></div>`).join('');
+
+document.getElementById('groups').innerHTML=groups.map(g=>`
+  <h2>${g.title}<small>${g.note} · ${g.items.length} 个</small></h2>
+  <div class="grid">${g.items.map(([f,label,src])=>`
+    <div class="tile">
+      <div class="preview ${f==='avatar.jpg'?'avatar':''}"><img src="./assets/${f}" alt="${label}" data-file="${f}"></div>
+      <div class="meta">
+        <div class="fname">assets/${f}</div>
+        <div class="dim">${label} · <span class="dimension" data-for="${f}">读取尺寸…</span></div>
+        <div class="src">来源：${src}</div>
+        <button class="btn" data-copy="![${label}](./assets/${f})">⧉ 复制引用</button>
+      </div>
+    </div>`).join('')}</div>`).join('');
+
+document.querySelectorAll('.preview img').forEach(img=>{
+  const set=()=>{const e=document.querySelector(`[data-for="${img.dataset.file}"]`);if(e)e.textContent=img.naturalWidth+' × '+img.naturalHeight;};
+  if(img.complete&&img.naturalWidth)set();else{img.onload=set;img.onerror=()=>{const e=document.querySelector(`[data-for="${img.dataset.file}"]`);if(e)e.textContent='加载失败';};}
+});
+
+function toast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1400);}
+function copy(text){
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(toast).catch(()=>legacy(text));}
+  else legacy(text);
+}
+function legacy(text){
+  const a=document.createElement('textarea');a.value=text;a.style.position='fixed';a.style.opacity='0';
+  document.body.appendChild(a);a.select();try{document.execCommand('copy');toast();}catch(e){}document.body.removeChild(a);
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-copy]');if(b)copy(b.dataset.copy);
+});
+document.getElementById('copyAll').onclick=()=>copy(all.map(f=>`![${f}](./assets/${f})`).join('\n'));
+</script>
+</body>
+</html>
