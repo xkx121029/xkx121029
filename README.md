@@ -1,6 +1,5 @@
 <p align="center">
-  <img src="./assets/typing.svg" width="440" alt="happy~happy~happy~"><br>
-  <img src="./assets/avatar.jpg?v=202611160329" width="96" alt="avatar">
+  <img src="./assets/typing.svg?v=202611162010" width="440" alt="happy~ · build ship repeat · 自托管玩家">
 </p>
 
 <h1 align="center">👋 Hi, I'm xkx121029</h1>
@@ -8,22 +7,27 @@
 <p align="center"><b>happy～happy～happy～　·　自托管玩家　·　什么都想自己整一个</b></p>
 
 <p align="center">
-  <img src="./assets/badge-repos.svg?v=202611160329" alt="repos">
-  <img src="./assets/badge-forks.svg?v=202611160329" alt="forks">
-  <img src="./assets/badge-stars.svg?v=202611160329" alt="stars">
+  <a href="https://github.com/xkx121029/Phtomt"><img src="./assets/badge-large-phone.svg" alt="Happy Phone Agent"></a>
+  <img src="./assets/badge-large-claw.svg" alt="HappyClaw">
+</p>
+
+<p align="center">
+  <img src="./assets/badge-repos.svg?v=202611161218" alt="repos">
+  <img src="./assets/badge-forks.svg?v=202611161218" alt="forks">
+  <img src="./assets/badge-stars.svg?v=202611161218" alt="stars">
   <img src="./assets/badge-starstruck.svg" alt="Starstruck x2">
   <img src="./assets/badge-dalian.svg" alt="Dalian">
   <img src="./assets/badge-self-hosted.svg" alt="self-hosted">
-  <img src="./assets/visitors.svg?v=202611160329" alt="profile views">
+  <img src="./assets/visitors.svg?v=202611161218" alt="profile views">
 </p>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/skillicons-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./assets/skillicons-light.svg">
-    <img src="./assets/skillicons-dark.svg" width="720" alt="Python Kotlin JavaScript TypeScript HTML Go Rust C++ C# Dart Vue Three.js Tauri Docker">
+    <img src="./assets/skillicons-dark.svg" width="560" alt="Python Kotlin JavaScript TypeScript HTML Go Rust C++ C# Dart Vue Three.js Tauri Docker">
   </picture><br>
-  <sub>↑ 图标条会跟着 GitHub 的亮 / 暗主题自动换色</sub>
+  <sub>↑ 双行图标条 · 跟着 GitHub 亮 / 暗主题自动换色</sub>
 </p>
 
 ---
@@ -44,7 +48,7 @@
 <table>
   <tr>
     <td width="50%" align="center" valign="top">
-      <a href="https://github.com/xkx121029/Phtomt"><img src="./assets/og-Phtomt.png?v=202611160329" width="370" alt="Phtomt 仓库官方预览卡"></a><br><br>
+      <a href="https://github.com/xkx121029/Phtomt"><img src="./assets/og-Phtomt.png?v=202611161218" width="370" alt="Phtomt 仓库官方预览卡"></a><br><br>
       <b>🤖 Happy Phone Agent</b><br><br>
       <img src="./assets/badge-kotlin.svg" alt="Kotlin">
       <img src="./assets/badge-android.svg" alt="Android">
@@ -66,7 +70,7 @@
   </tr>
 </table>
 
-<sub>左侧封面是 GitHub 官方生成的仓库社交预览卡（含描述 / star / fork），点图直达仓库，每 6 小时自动刷新。</sub>
+<sub>封面是 GitHub 官方生成的仓库社交预览卡（含描述 / star / fork），点图直达仓库，每 6 小时自动刷新。</sub>
 
 ---
 
@@ -75,22 +79,22 @@
 <table>
   <tr>
     <td align="center" width="50%">
-      <a href="https://github.com/xkx121029/happy-search"><img src="./assets/og-happy-search.png?v=202611160329" width="390" alt="happy-search"></a><br>
+      <a href="https://github.com/xkx121029/happy-search"><img src="./assets/og-happy-search.png?v=202611161218" width="390" alt="happy-search"></a><br>
       <b>🔍 happy-search</b> · <sub>多引擎聚合搜索 API</sub>
     </td>
     <td align="center" width="50%">
-      <a href="https://github.com/xkx121029/happy-relay"><img src="./assets/og-happy-relay.png?v=202611160329" width="390" alt="happy-relay"></a><br>
+      <a href="https://github.com/xkx121029/happy-relay"><img src="./assets/og-happy-relay.png?v=202611161218" width="390" alt="happy-relay"></a><br>
       <b>🔁 happy-relay</b> · <sub>OpenAI 兼容模型中转</sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="50%">
-      <a href="https://github.com/xkx121029/AioShell"><img src="./assets/og-AioShell.png?v=202611160329" width="390" alt="AioShell"></a><br>
+      <a href="https://github.com/xkx121029/AioShell"><img src="./assets/og-AioShell.png?v=202611161218" width="390" alt="AioShell"></a><br>
       <b>🐚 AioShell</b> · <sub>带 MCP / ACP 的工作区</sub>
     </td>
     <td align="center" width="50%">
-      <a href="https://github.com/xkx121029/HappyLook"><img src="./assets/og-HappyLook.png?v=202611160329" width="390" alt="HappyLook"></a><br>
-      <b>👀 HappyLook</b> · <sub>客户端方向</sub>
+      <a href="https://github.com/xkx121029/happy-cloud"><img src="./assets/og-happy-cloud.png?v=202611161218" width="390" alt="happy-cloud"></a><br>
+      <b>☁️ happy-cloud</b> · <sub>私有云盘</sub>
     </td>
   </tr>
 </table>
@@ -127,21 +131,183 @@
 
 ---
 
-## 📊 数据 & 项目版图
-
-<img src="./assets/streak.svg?v=202611160329" alt="GitHub contribution streak">
-
-| 方向 | 密度 | 数量 |
-| :--- | :--- | ---: |
-| 🔧 自托管 / 基建 | `████████████████████` | **10** |
-| 🖥 桌面 / 工具 | `████████████░░░░░░░░` | **6** |
-| 🤖 AI & 智能体 | `██████████░░░░░░░░░░` | **5** |
-| 📱 Android / 客户端 | `██████████░░░░░░░░░░` | **5** |
-| 🎮 3D / 小游戏 | `██████░░░░░░░░░░░░░░` | **3** |
-| 🌐 Web / CMS | `██░░░░░░░░░░░░░░░░░░░░` | **1** |
+> [!NOTE]
+> ### 🎨 程序化图表长廊
+> 下面这些**全是 GitHub 原生 Mermaid 矢量图**——由代码和数据生成，跟着明暗主题变色，不是图片、不会裂、放大不糊。点开折叠逐个看。
 
 <details open>
-<summary>🗺 项目版图（GitHub 网页端原生渲染，Mermaid 矢量图）</summary>
+<summary>🕰 时间线 · 一个 happy 项目是怎么诞生的</summary>
+
+```mermaid
+timeline
+    title 一个 happy 项目的诞生
+    section 想法
+        「能不能自己整一个」: 脑子里冒出来
+    section 验证
+        通宵写 Demo : 先跑起来 : 别管好不好看
+    section 打磨
+        抠 UI : 不漂亮不收工 : 修一堆 bug
+    section 上线
+        push 到 GitHub : 能自托管 : 持续更新
+    section 循环
+        开下一个坑 : 回到起点
+```
+
+</details>
+
+<details>
+<summary>🔀 Git 提交图 · build → ship → repeat</summary>
+
+```mermaid
+gitGraph
+    commit id: "想法"
+    commit id: "通宵 Demo"
+    branch polish
+    checkout polish
+    commit id: "抠 UI"
+    commit id: "修 bug" type: HIGHLIGHT
+    checkout main
+    merge polish tag: "v1.0"
+    commit id: "上线"
+    commit id: "下一个坑"
+```
+
+</details>
+
+<details>
+<summary>🎯 四象限 · 技术栈坐标</summary>
+
+```mermaid
+quadrantChart
+    title 我的技术栈坐标
+    x-axis 用得少 --> 天天用
+    y-axis 刚上手 --> 很熟练
+    quadrant-1 主力输出
+    quadrant-2 正在深耕
+    quadrant-3 浅尝辄止
+    quadrant-4 顺手就上
+    Python: [0.92, 0.90]
+    Kotlin: [0.80, 0.85]
+    Docker: [0.86, 0.88]
+    Vue: [0.78, 0.80]
+    Go: [0.68, 0.72]
+    Rust: [0.52, 0.60]
+    C++: [0.42, 0.55]
+    Dart: [0.38, 0.45]
+```
+
+</details>
+
+<details>
+<summary>📊 柱状图 + 折线 · 30 个项目的方向分布</summary>
+
+```mermaid
+xychart-beta
+    title "30 个开源项目 · 方向分布"
+    x-axis ["基建", "桌面", "AI", "客户端", "3D", "Web"]
+    y-axis "项目数" 0 --> 12
+    bar [10, 6, 5, 5, 3, 1]
+    line [10, 6, 5, 5, 3, 1]
+```
+
+</details>
+
+<details>
+<summary>🧠 思维导图 · happy 宇宙全景</summary>
+
+```mermaid
+mindmap
+  root((happy 宇宙))
+    给 AI 造工具
+      搜索 API
+      模型中转
+      MCP / ACP
+      手机智能体
+    客户端全线
+      Kotlin Compose
+      WPF
+      Tauri Vue
+      Flutter
+    自托管
+      Docker
+      OIDC
+      WebRTC
+    玩具
+      Three.js
+      3D 驾驶
+      AI 闯关
+```
+
+</details>
+
+<details>
+<summary>🔄 状态机 · 从想法到开下一个坑</summary>
+
+```mermaid
+stateDiagram-v2
+    [*] --> 冒出想法
+    冒出想法 --> 通宵写码: 能不能自己整一个
+    通宵写码 --> 跑通了: 第一次 build
+    跑通了 --> 抠UI: UI 不漂亮不收工
+    抠UI --> 上线: push
+    上线 --> 开下一个坑: 有人 star 了
+    开下一个坑 --> 冒出想法: 循环
+    上线 --> [*]: 收工
+```
+
+</details>
+
+<details>
+<summary>🛤 旅程图 · 一个开源项目的心路历程</summary>
+
+```mermaid
+journey
+    title 一个开源项目的心路历程
+    section 起点
+      冒出想法: 5: me
+      通宵 Demo: 4: me
+    section 打磨
+      抠 UI: 3: me
+      修 bug: 2: me
+    section 上线
+      push: 5: me
+      有人 star: 5: me, community
+```
+
+</details>
+
+<details>
+<summary>🌊 桑基图 · 技术栈流向</summary>
+
+```mermaid
+sankey-beta
+    Python,自托管基建,8
+    Go,自托管基建,5
+    Kotlin,客户端全线,6
+    Vue,桌面工具,4
+    Rust,桌面工具,3
+    JavaScript,Web 与 3D,3
+```
+
+</details>
+
+---
+
+## 📊 数据 & 项目版图
+
+<img src="./assets/streak.svg?v=202611161218" alt="GitHub contribution streak">
+
+| 方向 | 密度 | 数量 | 走势 |
+| :--- | :--- | ---: | :--- |
+| 🔧 自托管 / 基建 | `████████████████████` | **10** | `▁▂▃▅▆▇█▆` |
+| 🖥 桌面 / 工具 | `████████████░░░░░░░░` | **6** | `▂▄▆█▆▄▂` |
+| 🤖 AI & 智能体 | `██████████░░░░░░░░░░` | **5** | `▁▃▅▇▅▃▁` |
+| 📱 Android / 客户端 | `██████████░░░░░░░░░░` | **5** | `▂▄▆▆▄▂▁` |
+| 🎮 3D / 小游戏 | `██████░░░░░░░░░░░░░░` | **3** | `▁▂▄▃▂▁▁` |
+| 🌐 Web / CMS | `██░░░░░░░░░░░░░░░░░░░░` | **1** | `▁▁▂▁▁▁▁` |
+
+<details>
+<summary>🗺 项目版图（Mermaid flowchart）</summary>
 
 ```mermaid
 flowchart TB
@@ -255,27 +421,24 @@ pie title 30 个开源项目 · 方向分布
 
 <!--
   【视觉】全部用 GitHub 原生能力 + ./assets/ 本地图片，不请求任何外链：
-    - <picture> + prefers-color-scheme 让 skillicons 图标条跟随亮/暗主题
-    - GitHub 原生 Alert（IMPORTANT / TIP / NOTE）、任务列表复选框、<kbd> 键帽
-    - Mermaid flowchart（classDef 配色）+ pie 饼图，GitHub 网页端矢量渲染
-    - HTML 表格做双列封面墙；等宽字符进度条展示真实分组数量
-    - 打字机动效 typing.svg、GitHub 官方仓库 OG 封面、shields 徽章均为下载好的真实图片
+    - <picture> + prefers-color-scheme 让双行 skillicons 跟随亮/暗主题
+    - 三行轮流打字机动效 typing.svg、for-the-badge 大徽章
+    - GitHub 原生 Alert（IMPORTANT / TIP / NOTE）、任务列表、<kbd> 键帽
+    - Mermaid 图表长廊：timeline / gitGraph / quadrantChart / xychart-beta / mindmap /
+      stateDiagram-v2 / journey / sankey-beta + 原有 flowchart / pie，共 10 张，GitHub 网页端矢量渲染
+    - HTML 表格做双列封面墙；等宽字符进度条 + sparkline 走势展示真实分组数量
 
   【持续更新】.github/workflows/refresh-assets.yml 每 6 小时（UTC 0/6/12/18）
   在 GitHub Actions 的境外 runner 上执行 scripts/refresh-assets.mjs：
     - 调 GitHub API 拿实时仓库数 / fork 数 / star 总数 -> 重生成 3 张数字徽章
-    - 重抓 streak-stats 连续提交卡、komarev 访客计数、GitHub 官方头像
-    - 重抓 5 张官方仓库 OG 封面（URL 带时间戳破缓存）
+    - 重抓 streak（radical 主题）、komarev 访客计数、GitHub 官方头像
+    - 重抓 6 张官方仓库 OG 封面（含 happy-cloud，URL 带时间戳破缓存）
     - 内容有变化才写盘并提交；下载失败保留上一次成功的图片
+    - 静态素材（双行图标条 / 三行打字机 / for-the-badge 徽章）只在缺失时补齐，URL 已同步新版
     - 图片后的 ?v= 是脚本维护的缓存版本号，用于破 GitHub 图片代理缓存，请勿手动删除
-  也可在 Actions 页面手动 Run workflow，或本地执行 node scripts/refresh-assets.mjs。
 
-  抓取失败并已放弃：capsule-render / github-readme-stats / activity-graph / trophy（vercel 系不通）、
-  gh-card.dev、ghchart.rshah.org；头图 / 统计总卡 / 贡献图用 GitHub 原生 Alert + 表格 + Mermaid 顶替。
+  【人工维护】正文里的「30 个项目」、分组数字（5/10/5/6/3/1）、字符进度条、sparkline
+  与所有 Mermaid 图里的数据都是同一份分类快照，脚本不改正文文字，只更新徽章数字和图片。
 
-  【人工维护】正文里的「30 个项目」、分组数字（5/10/5/6/3/1）、字符进度条与两张 Mermaid 图
-  都是同一份分类快照，脚本不会自动改文字；新增仓库后如需精确，一并改这几处。徽章数字是自动的。
-
-  上线：把本目录全部内容（含 assets/、scripts/、.github/）作为 xkx121029/xkx121029 仓库根目录推送，
-  并在仓库 Settings → Actions → General → Workflow permissions 选 "Read and write permissions"。
+  上线：把本目录全部内容（含 assets/、scripts/、.github/）作为 xkx121029/xkx121029 仓库根目录推送。
 -->

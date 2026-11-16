@@ -3,262 +3,364 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>xkx121029 · Profile README 预览</title>
+<title>xkx121029 · Profile 特效预览</title>
 <style>
   :root{
-    --bg:#0d1117; --panel:#161b22; --panel2:#1c2128; --line:#30363d;
+    --bg:#010409; --canvas:#0d1117; --panel:#161b22; --panel2:#1c2128; --line:#30363d;
     --tx:#e6edf3; --dim:#8b949e; --blue:#58a6ff; --purple:#a371f7;
-    --green:#3fb950; --amber:#d29922; --pink:#f778ba;
+    --green:#3fb950; --amber:#d29922; --pink:#f778ba; --cyan:#39c5cf;
   }
   *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
   body{margin:0;background:var(--bg);color:var(--tx);
-    font:15px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
-  .wrap{max-width:900px;margin:0 auto;padding:28px 22px 70px}
+    font:15px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    overflow-x:hidden}
+  #stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+  .glow{position:fixed;border-radius:50%;filter:blur(110px);opacity:.16;z-index:0;pointer-events:none}
+  .g1{width:520px;height:520px;background:var(--purple);top:-180px;left:-120px;animation:float1 16s ease-in-out infinite}
+  .g2{width:460px;height:460px;background:var(--blue);top:35%;right:-160px;animation:float2 20s ease-in-out infinite}
+  .g3{width:400px;height:400px;background:var(--pink);bottom:-160px;left:30%;animation:float1 24s ease-in-out infinite reverse}
+  @keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,50px)}}
+  @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-70px,40px)}}
+  .wrap{position:relative;z-index:1;max-width:920px;margin:0 auto;padding:26px 20px 90px}
   .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
-    background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin-bottom:26px;font-size:12.5px}
+    background:rgba(22,27,34,.8);backdrop-filter:blur(10px);border:1px solid var(--line);
+    border-radius:11px;padding:11px 16px;margin-bottom:28px;font-size:12.5px;position:sticky;top:12px;z-index:5}
   .bar b{color:var(--blue)} .bar a{color:var(--dim);text-decoration:none} .bar a:hover{color:var(--blue)}
-  .ok{color:var(--green)}
-  .md{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:30px 34px}
-  h1{font-size:30px;margin:6px 0 4px} h2{font-size:21px;margin:38px 0 14px;padding-bottom:9px;border-bottom:1px solid var(--line)}
-  h3{font-size:16px;margin:0 0 8px} p{margin:10px 0}
-  .center{text-align:center} .sub{color:var(--dim);font-size:12.5px} .lead{font-weight:600}
-  .badges{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin:14px 0} .badges img{height:20px}
-  .icons{display:block;margin:0 auto;max-width:100%} hr{border:0;border-top:1px solid var(--line);margin:30px 0}
-  .alert{border-left:4px solid var(--blue);background:rgba(56,139,253,.08);border-radius:0 8px 8px 0;padding:14px 18px;margin:18px 0}
-  .alert.important{border-color:var(--purple);background:rgba(163,113,247,.09)}
+  .ok{color:var(--green)} .live{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);
+    box-shadow:0 0 0 0 rgba(63,185,80,.6);animation:pulse 2s infinite;margin-right:6px}
+  @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(63,185,80,0)}100%{box-shadow:0 0 0 0 rgba(63,185,80,0)}}
+  .md{background:rgba(13,17,23,.82);backdrop-filter:blur(6px);border:1px solid var(--line);
+    border-radius:14px;padding:34px 38px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  /* hero */
+  .hero{text-align:center;padding:14px 0 8px}
+  .typewrap{height:34px;font:600 24px/34px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--blue);
+    display:flex;align-items:center;justify-content:center;gap:2px;overflow:hidden}
+  .type{white-space:nowrap;overflow:hidden;border-right:2px solid var(--blue);
+    animation:typing 6s steps(30,end) infinite, blink .7s step-end infinite}
+  @keyframes typing{0%,8%{width:0}28%,38%{width:11ch}45%,55%{width:16ch}62%,95%{width:20ch}100%{width:0}}
+  @keyframes blink{50%{border-color:transparent}}
+  .avatar{width:100px;height:100px;border-radius:50%;margin:20px auto 12px;display:block;
+    border:3px solid transparent;background:linear-gradient(var(--canvas),var(--canvas)) padding-box,
+    conic-gradient(from 0deg,var(--blue),var(--purple),var(--pink),var(--cyan),var(--blue)) border-box;
+    animation:spin 8s linear infinite;box-shadow:0 0 30px rgba(88,166,255,.35)}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .avatar img{width:100%;height:100%;border-radius:50%;display:block}
+  h1{font-size:34px;margin:10px 0 6px;letter-spacing:-.5px}
+  h1 .wave{display:inline-block;animation:wave 2.2s ease-in-out infinite;transform-origin:70% 70%}
+  @keyframes wave{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(18deg)}80%{transform:rotate(-8deg)}90%{transform:rotate(12deg)}}
+  .lead{color:var(--dim);font-size:14px}
+  .bigbadges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:20px 0 16px}
+  .bigbadges img{height:28px;border-radius:4px;transition:transform .25s}
+  .bigbadges img:hover{transform:translateY(-3px) scale(1.05)}
+  .badges{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin:8px 0}
+  .badges img{height:20px}
+  .icons{display:block;margin:16px auto 0;max-width:100%;animation:fadein 1s .3s both}
+  @keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  h2{font-size:21px;margin:46px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;gap:9px}
+  h2 .idx{font:600 12px ui-monospace,monospace;color:var(--bg);background:var(--blue);
+    border-radius:5px;padding:2px 7px}
+  .sub{color:var(--dim);font-size:12.5px} p{margin:10px 0}
+  .alert{border-left:4px solid var(--blue);background:rgba(56,139,253,.08);border-radius:0 9px 9px 0;padding:15px 19px;margin:18px 0}
+  .alert.important{border-color:var(--purple);background:linear-gradient(90deg,rgba(163,113,247,.14),rgba(163,113,247,.03))}
   .alert.tip{border-color:var(--green);background:rgba(63,185,80,.08)}
-  .alert .tag{font-size:11px;letter-spacing:1.2px;font-weight:700;color:var(--purple);text-transform:uppercase}
+  .alert.note{border-color:var(--blue)}
+  .alert .tag{font-size:11px;letter-spacing:1.3px;font-weight:800;color:var(--purple)}
   .alert.tip .tag{color:var(--green)} .alert.note .tag{color:var(--blue)}
-  .alert ul{margin:10px 0 4px;padding-left:20px} .alert li{margin:3px 0}
+  .alert ul{margin:10px 0 4px;padding-left:20px}
   kbd{background:var(--panel2);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;
     padding:1px 7px;font:12px ui-monospace,Consolas,monospace}
   code{background:var(--panel2);border-radius:4px;padding:2px 5px;font-size:12.5px;font-family:ui-monospace,Consolas,monospace}
-  .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;text-align:center}
+  /* 主推双卡 · 流光边框 */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}
+  .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:13px;
+    padding:18px;text-align:center;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s;overflow:hidden}
+  .card:hover{transform:translateY(-7px);box-shadow:0 16px 40px rgba(88,166,255,.18)}
+  .card::before{content:"";position:absolute;inset:-2px;border-radius:14px;padding:2px;
+    background:conic-gradient(from var(--a),var(--blue),var(--purple),var(--pink),var(--blue));
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .35s}
+  .card:hover::before{opacity:1;animation:rotate 4s linear infinite}
+  @property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+  @keyframes rotate{to{--a:360deg}}
   .card img.cover{width:100%;max-width:370px;border-radius:8px;border:1px solid var(--line);display:block;margin:0 auto 14px}
-  .card.wip{display:flex;flex-direction:column;justify-content:center;align-items:center;
-    background:linear-gradient(145deg,rgba(163,113,247,.13),rgba(88,166,255,.07));border-style:dashed}
-  .card.wip .emoji{font-size:52px;line-height:1.1;margin-bottom:8px}
+  .card.wip{background:linear-gradient(145deg,rgba(163,113,247,.14),rgba(88,166,255,.06));border-style:dashed;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:330px}
+  .card.wip .emoji{font-size:56px;animation:wiggle 3s ease-in-out infinite}
+  @keyframes wiggle{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
   .btn{display:inline-block;background:#21262d;border:1px solid var(--line);border-radius:7px;
-    padding:6px 14px;color:var(--blue);text-decoration:none;font-size:13px;font-weight:600;margin-top:8px}
+    padding:6px 15px;color:var(--blue);text-decoration:none;font-size:13px;font-weight:600;margin-top:8px;transition:.2s}
+  .btn:hover{background:var(--blue);color:#fff}
   .grid4{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
-  .shot{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center}
-  .shot img{width:100%;border-radius:6px;display:block;margin-bottom:9px} .shot b{font-size:14px}
+  .shot{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center;transition:transform .25s}
+  .shot:hover{transform:scale(1.025)}
+  .shot img{width:100%;border-radius:6px;display:block;margin-bottom:9px}
   table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px}
-  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left}
   th{background:var(--panel2);color:var(--dim)} td.num{text-align:right;font-variant-numeric:tabular-nums}
   .meter{font-family:ui-monospace,Consolas,monospace;letter-spacing:-1px;color:var(--blue);white-space:nowrap}
-  .graph{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px;margin:16px 0}
-  .hub{text-align:center;background:#30363d;border:1px solid #8b949e;border-radius:30px;padding:8px 20px;
-    display:inline-block;font-weight:600;margin:0 auto 6px}
-  .hubwrap{text-align:center} .stem{width:1px;height:18px;background:var(--line);margin:0 auto}
-  .nodes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
-  .node{border-radius:8px;padding:11px 8px;text-align:center;font-size:12.5px;font-weight:600;color:#fff}
-  .n-ai{background:#6e40c9}.n-infra{background:#1158c7}.n-mob{background:#116329}
-  .n-desk{background:#7d4e00}.n-game{background:#9e2a6b}.n-web{background:#0e7490}
-  .hot{margin-top:14px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  .hot span{background:#1f6feb;border:1px solid #79c0ff;border-radius:20px;padding:5px 13px;font-size:12px}
-  .pie-wrap{display:flex;gap:24px;align-items:center;justify-content:center;flex-wrap:wrap;background:var(--panel);
-    border:1px solid var(--line);border-radius:10px;padding:22px;margin:16px 0}
-  .pie{width:170px;height:170px;border-radius:50%;position:relative;
-    background:conic-gradient(#1158c7 0 33.33%,#7d4e00 33.33% 53.33%,#6e40c9 53.33% 70%,
-      #116329 70% 86.67%,#9e2a6b 86.67% 96.67%,#0e7490 96.67% 100%)}
-  .pie::after{content:"30";position:absolute;inset:32px;border-radius:50%;background:var(--panel);
-    display:grid;place-items:center;font-size:26px;font-weight:700}
-  .legend{font-size:13px;line-height:2} .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:7px}
-  details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:8px 0}
-  summary{cursor:pointer;font-weight:600;color:var(--blue);font-size:14px}
-  details p{margin:10px 0 2px;font-size:13px;color:var(--dim)} a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}
-  ul.plain{padding-left:20px} ul.plain li{margin:7px 0}
-  .contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
-  .contacts a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:15px;text-align:center;font-weight:600}
-  footer{text-align:center;color:var(--dim);font-size:12.5px;margin-top:34px;line-height:2}
-  @media (max-width:680px){.duo,.grid4,.nodes,.contacts{grid-template-columns:1fr}.md{padding:20px 16px}}
+  .spark{font-family:ui-monospace,monospace;letter-spacing:1px;color:var(--pink)}
+  /* 图表长廊 */
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+  .chart{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:14px 16px;
+    opacity:0;transform:translateY(16px);transition:opacity .55s,transform .55s}
+  .chart.in{opacity:1;transform:none}
+  .chart h3{font-size:13px;margin:0 0 3px;color:var(--tx)}
+  .chart .cap{font-size:11px;color:var(--dim);margin-bottom:12px}
+  .chart svg{width:100%;height:auto;display:block}
+  .chart.full{grid-column:1/-1}
+  /* 数字滚动 */
+  .nums{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+  .num{background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);
+    border-radius:11px;padding:16px 8px;text-align:center}
+  .num b{display:block;font-size:30px;font-weight:800;line-height:1.1;
+    background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .num span{font-size:11px;color:var(--dim)}
+  footer{text-align:center;margin-top:44px;color:var(--dim);font-size:12px}
+  .foot-emoji{letter-spacing:6px;font-size:16px;margin-top:8px}
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+  .reveal.in{opacity:1;transform:none}
+  @media(max-width:720px){.duo,.grid4,.gallery{grid-template-columns:1fr}.nums{grid-template-columns:1fr 1fr}
+    .md{padding:22px 16px}h1{font-size:26px}}
 </style>
 </head>
 <body>
+<canvas id="stars"></canvas>
+<div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
 <div class="wrap">
-
   <div class="bar">
-    <span><b>GitHub Profile README</b> · xkx121029/xkx121029 · <span class="ok">本地素材 · 零外链 · 持续更新</span></span>
-    <span>
-      <a href="./README.md">README.md</a> · <a href="./README-plain.md">纯文本版</a> ·
-      <a href="./README-rich.md">富卡片版</a> · <a href="./assets.html">素材合集</a>
-    </span>
+    <div><b>🎨 Profile 特效预览</b> · <span class="live"></span>自动刷新已开启</div>
+    <div><a href="README.md">README.md</a> · <a href="assets.html">素材合集</a></div>
   </div>
-
   <div class="md">
 
-    <p class="center"><img src="./assets/typing.svg" width="440" alt="typing"><br>
-      <img src="./assets/avatar.jpg?v=202611151239" width="96" alt="avatar" style="border-radius:50%"></p>
-    <h1 class="center">👋 Hi, I'm xkx121029</h1>
-    <p class="center lead">happy～happy～happy～　·　自托管玩家　·　什么都想自己整一个</p>
-
-    <div class="badges">
-      <img src="./assets/badge-repos.svg?v=202611151239" alt="repos">
-      <img src="./assets/badge-forks.svg?v=202611151239" alt="forks">
-      <img src="./assets/badge-stars.svg?v=202611151239" alt="stars">
-      <img src="./assets/badge-starstruck.svg" alt="starstruck">
-      <img src="./assets/badge-dalian.svg" alt="Dalian">
-      <img src="./assets/badge-self-hosted.svg" alt="self-hosted">
-      <img src="./assets/visitors.svg?v=202611151239" alt="views">
+    <div class="hero">
+      <div class="typewrap"><span class="type" id="typeText"></span></div>
+      <div class="avatar"><img src="./assets/avatar.jpg" alt="avatar"></div>
+      <h1><span class="wave">👋</span> Hi, I'm xkx121029</h1>
+      <div class="lead">happy～happy～happy～ · 自托管玩家 · 什么都想自己整一个</div>
+      <div class="bigbadges">
+        <a href="https://github.com/xkx121029/Phtomt"><img src="./assets/badge-large-phone.svg" alt="phone"></a>
+        <img src="./assets/badge-large-claw.svg" alt="claw">
+      </div>
+      <div class="badges">
+        <img src="./assets/badge-repos.svg" alt="repos"><img src="./assets/badge-forks.svg" alt="forks">
+        <img src="./assets/badge-stars.svg" alt="stars"><img src="./assets/badge-starstruck.svg" alt="starstruck">
+        <img src="./assets/badge-dalian.svg" alt="dalian"><img src="./assets/badge-self-hosted.svg" alt="self-hosted">
+        <img src="./assets/visitors.svg" alt="views">
+      </div>
+      <img class="icons" src="./assets/skillicons-dark.svg" width="520" alt="skills">
+      <div class="sub">↑ 双行图标条 · README 里会跟随亮 / 暗主题自动换色</div>
     </div>
 
-    <p class="center"><picture>
-      <source media="(prefers-color-scheme: light)" srcset="./assets/skillicons-light.svg">
-      <img class="icons" src="./assets/skillicons-dark.svg" width="720" alt="tech icons">
-    </picture><br><span class="sub">↑ 图标条会跟着 GitHub 的亮 / 暗主题自动换色</span></p>
-
-    <hr>
-
     <div class="alert important">
-      <div class="tag">Important · 🚀 NOW</div>
-      <b>Happy Phone Agent</b> 已开源，正在打磨；<b>HappyClaw</b> 在整，路上。
+      <div class="tag">IMPORTANT · NOW</div>
+      <h3>🚀 正在整</h3>
+      <b>Happy Phone Agent</b> 已开源打磨中；<b>HappyClaw</b> 在路上。
       <ul>
         <li>☑ <code>Phtomt</code> → 能自己操控手机的 Android AI 智能体</li>
         <li>☐ <code>HappyClaw</code> → 下一个主推，仓库还没公开</li>
       </ul>
-      <span class="sub">偏好很固定：<kbd>零依赖</kbd> <kbd>单文件</kbd> <kbd>双击即玩</kbd> <kbd>自己能托管</kbd></span>
+      <sub>偏好很固定：<kbd>零依赖</kbd> <kbd>单文件</kbd> <kbd>双击即玩</kbd> <kbd>自己能托管</kbd></sub>
     </div>
 
-    <h2>🎯 主推项目</h2>
+    <h2><span class="idx">01</span> 🎯 主推项目</h2>
     <div class="duo">
       <div class="card">
-        <a href="https://github.com/xkx121029/Phtomt"><img class="cover" src="./assets/og-Phtomt.png?v=202611151239" alt="Phtomt"></a>
-        <h3>🤖 Happy Phone Agent</h3>
-        <div class="badges" style="margin:6px 0">
-          <img src="./assets/badge-kotlin.svg" alt="Kotlin">
-          <img src="./assets/badge-android.svg" alt="Android">
-          <img src="./assets/badge-ai-agent.svg" alt="AI Agent">
-        </div>
-        <p class="sub">基于 AI 的 Android 智能体，自动操控手机完成复杂任务。</p>
+        <a href="https://github.com/xkx121029/Phtomt"><img class="cover" src="./assets/og-Phtomt.png" alt="Phtomt"></a>
+        <b>🤖 Happy Phone Agent</b><br>
+        <img src="./assets/badge-kotlin.svg" alt=""><img src="./assets/badge-android.svg" alt=""><img src="./assets/badge-ai-agent.svg" alt=""><br>
+        <span class="sub">基于 AI 的 Android 智能体，自动操控手机完成复杂任务。</span><br>
         <a class="btn" href="https://github.com/xkx121029/Phtomt">→ 打开仓库</a>
       </div>
       <div class="card wip">
         <div class="emoji">🦀</div>
-        <h3>HappyClaw</h3>
-        <div class="badges" style="margin:6px 0">
-          <img src="./assets/badge-wip.svg" alt="WIP">
-          <img src="./assets/badge-coming-soon.svg" alt="Coming Soon">
-        </div>
-        <p class="sub">下一个主推项目 · 正在整</p>
-        <p><b>先占位，不编链接</b></p>
-        <p class="sub">GitHub 上暂时查不到公开仓库<br>开源了立刻补上真实地址</p>
-        <p>🧩 ⚙️ 🛠️ 🧠 🔧</p>
+        <b>HappyClaw</b><br>
+        <img src="./assets/badge-wip.svg" alt=""><img src="./assets/badge-coming-soon.svg" alt=""><br>
+        <span class="sub">下一个主推项目 · 正在整<br>先占位，不编链接</span><br>
+        <div style="font-size:26px;margin-top:10px">🧩 ⚙️ 🛠️ 🧠 🔧</div>
       </div>
     </div>
-    <p class="sub">左侧封面是 GitHub 官方生成的仓库社交预览卡（含描述 / star / fork），点图直达仓库，每 6 小时自动刷新。</p>
 
-    <h2>🖼 项目掠影</h2>
+    <h2><span class="idx">02</span> 🖼 项目掠影</h2>
     <div class="grid4">
-      <div class="shot"><a href="https://github.com/xkx121029/happy-search"><img src="./assets/og-happy-search.png?v=202611151239" alt="happy-search"></a><b>🔍 happy-search</b> <span class="sub">· 多引擎聚合搜索 API</span></div>
-      <div class="shot"><a href="https://github.com/xkx121029/happy-relay"><img src="./assets/og-happy-relay.png?v=202611151239" alt="happy-relay"></a><b>🔁 happy-relay</b> <span class="sub">· OpenAI 兼容模型中转</span></div>
-      <div class="shot"><a href="https://github.com/xkx121029/AioShell"><img src="./assets/og-AioShell.png?v=202611151239" alt="AioShell"></a><b>🐚 AioShell</b> <span class="sub">· 带 MCP / ACP 的工作区</span></div>
-      <div class="shot"><a href="https://github.com/xkx121029/HappyLook"><img src="./assets/og-HappyLook.png?v=202611151239" alt="HappyLook"></a><b>👀 HappyLook</b> <span class="sub">· 客户端方向</span></div>
+      <div class="shot"><a href="https://github.com/xkx121029/happy-search"><img src="./assets/og-happy-search.png" alt=""></a><b>🔍 happy-search</b></div>
+      <div class="shot"><a href="https://github.com/xkx121029/happy-relay"><img src="./assets/og-happy-relay.png" alt=""></a><b>🔁 happy-relay</b></div>
+      <div class="shot"><a href="https://github.com/xkx121029/AioShell"><img src="./assets/og-AioShell.png" alt=""></a><b>🐚 AioShell</b></div>
+      <div class="shot"><a href="https://github.com/xkx121029/happy-cloud"><img src="./assets/og-happy-cloud.png" alt=""></a><b>☁️ happy-cloud</b></div>
     </div>
 
-    <h2>👋 关于我</h2>
-    <p>大连，一个人把想法从 0 整到能跑。30 个开源项目，几乎全是从零起的，<b>名字基本都以 happy 开头</b>。</p>
-    <div class="alert tip"><div class="tag">Tip</div><b>「能不能自己整一个？」——能，就整了。</b></div>
-    <ul class="plain">
-      <li>🧠 <b>给 AI 造工具</b>：自托管搜索 API（14 引擎 + RRF 融合排序）、OpenAI 兼容中转、MCP / ACP 工作区、能操控手机的 Android 智能体</li>
-      <li>📱 <b>客户端全线</b>：Kotlin / Compose、C# / WPF、Tauri 2 + Vue、Flutter、纯 Rust 的 Windows TSF 输入法</li>
-      <li>🖥 <b>自托管 &amp; 运维</b>：私有云盘、统一身份枢纽（OIDC / Ed25519 / WebRTC 信令）、ARM64 上 Docker + QEMU 跑 Windows</li>
-      <li>🎮 <b>也写玩具</b>：Three.js 单文件 2.5D 农场、3D 自动驾驶训练、AI 闯关、代码动画生成器</li>
-      <li>🧩 先跑通再抠体验，<b>UI 不漂亮不收工</b></li>
-    </ul>
+    <h2><span class="idx">03</span> 🎨 程序化图表长廊</h2>
+    <div class="alert note sub">下面每张图在 README 里都是 GitHub 原生 Mermaid 矢量图，由代码和数据生成、随主题变色。这里用 CSS/SVG 复刻视觉效果。</div>
+    <div class="gallery" id="gallery">
 
-    <h2>🧰 技术栈</h2>
-    <div class="badges" style="justify-content:flex-start">
-      <img src="./assets/badge-python.svg" alt="Python"><img src="./assets/badge-kotlin.svg" alt="Kotlin">
-      <img src="./assets/badge-rust.svg" alt="Rust"><img src="./assets/badge-go.svg" alt="Go">
-      <img src="./assets/badge-cpp.svg" alt="C++"><img src="./assets/badge-vue.svg" alt="Vue">
-      <img src="./assets/badge-tauri.svg" alt="Tauri"><img src="./assets/badge-docker.svg" alt="Docker">
-      <img src="./assets/badge-mcp.svg" alt="MCP">
-    </div>
-    <table>
-      <tr><th>领域</th><th>用到的东西</th></tr>
-      <tr><td><b>AI / 给 AI 用的基建</b></td><td>零 API Key 搜索 API（14 引擎 + RRF）、OpenAI 兼容中转、MCP / ACP / REST、OIDC / Ed25519、WebRTC 信令</td></tr>
-      <tr><td><b>后端</b></td><td>Python、Go（单文件二进制 + 内嵌 Web 面板）、Node.js（<code>node:sqlite</code>）、Gin</td></tr>
-      <tr><td><b>桌面 / 移动</b></td><td>Kotlin + Compose、C# / WPF（.NET 8 + SkiaSharp）、Tauri 2 + Vue、Flutter / Dart、Rust + <code>windows-rs</code></td></tr>
-      <tr><td><b>前端 / 3D</b></td><td>HTML / JS / TS、Three.js、WebView、纯前端零构建、React + Vite + TailwindCSS</td></tr>
-      <tr><td><b>基建运维</b></td><td>Docker、ARM64、QEMU + QMP + noVNC、P2P 局域网同步、私有云</td></tr>
-    </table>
-
-    <h2>📊 数据 &amp; 项目版图</h2>
-    <p><img src="./assets/streak.svg?v=202611151239" alt="streak" style="max-width:100%"></p>
-    <table>
-      <tr><th>方向</th><th>密度</th><th style="text-align:right">数量</th></tr>
-      <tr><td>🔧 自托管 / 基建</td><td class="meter">████████████████████</td><td class="num"><b>10</b></td></tr>
-      <tr><td>🖥 桌面 / 工具</td><td class="meter">████████████░░░░░░░░</td><td class="num"><b>6</b></td></tr>
-      <tr><td>🤖 AI &amp; 智能体</td><td class="meter">██████████░░░░░░░░░░</td><td class="num"><b>5</b></td></tr>
-      <tr><td>📱 Android / 客户端</td><td class="meter">██████████░░░░░░░░░░</td><td class="num"><b>5</b></td></tr>
-      <tr><td>🎮 3D / 小游戏</td><td class="meter">██████░░░░░░░░░░░░░░</td><td class="num"><b>3</b></td></tr>
-      <tr><td>🌐 Web / CMS</td><td class="meter">██░░░░░░░░░░░░░░░░░░░░</td><td class="num"><b>1</b></td></tr>
-    </table>
-
-    <details open>
-      <summary>🗺 项目版图（README 里是 Mermaid 矢量图，这里用 CSS 等价呈现）</summary>
-      <div class="graph">
-        <div class="hubwrap"><span class="hub">🧑‍💻 xkx121029 &nbsp;·&nbsp; 30 repos · 0 fork</span></div>
-        <div class="stem"></div>
-        <div class="nodes">
-          <div class="node n-ai">🤖 AI &amp; 智能体<br>5</div>
-          <div class="node n-infra">🔧 自托管 / 基建<br>10</div>
-          <div class="node n-mob">📱 Android / 客户端<br>5</div>
-          <div class="node n-desk">🖥 桌面 / 工具<br>6</div>
-          <div class="node n-game">🎮 3D / 小游戏<br>3</div>
-          <div class="node n-web">🌐 Web / CMS<br>1</div>
-        </div>
-        <div class="hot"><span>🚀 Happy Phone Agent</span><span>happy-search · happy-relay</span></div>
+      <div class="chart full">
+        <h3>🕰 时间线 · 一个 happy 项目的诞生</h3><div class="cap">timeline</div>
+        <svg viewBox="0 0 800 90" xmlns="http://www.w3.org/2000/svg">
+          <line x1="30" y1="45" x2="770" y2="45" stroke="#30363d" stroke-width="3"/>
+          <g fill="#58a6ff"><circle cx="70" cy="45" r="7"/><circle cx="250" cy="45" r="7"/><circle cx="430" cy="45" r="7"/><circle cx="610" cy="45" r="7"/><circle cx="760" cy="45" r="7"/></g>
+          <g font-size="12" fill="#8b949e" text-anchor="middle">
+            <text x="70" y="30">想法</text><text x="250" y="30">验证</text><text x="430" y="30">打磨</text><text x="610" y="30">上线</text><text x="760" y="30">循环</text>
+            <text x="70" y="70">能不能整</text><text x="250" y="70">通宵 Demo</text><text x="430" y="70">抠 UI</text><text x="610" y="70">push</text><text x="752" y="70">下一个坑</text>
+          </g>
+        </svg>
       </div>
-      <p>对应 README 里的 <code>flowchart TB</code> + <code>classDef</code> 配色，GitHub 网页端原生渲染。</p>
-    </details>
 
-    <details>
-      <summary>🥧 展开看方向占比（README 里是 Mermaid 饼图）</summary>
-      <div class="pie-wrap">
-        <div class="pie"></div>
-        <div class="legend">
-          <div><i style="background:#1158c7"></i>自托管 / 基建 <b>10</b></div>
-          <div><i style="background:#7d4e00"></i>桌面 / 工具 <b>6</b></div>
-          <div><i style="background:#6e40c9"></i>AI &amp; 智能体 <b>5</b></div>
-          <div><i style="background:#116329"></i>Android / 客户端 <b>5</b></div>
-          <div><i style="background:#9e2a6b"></i>3D / 小游戏 <b>3</b></div>
-          <div><i style="background:#0e7490"></i>Web / CMS <b>1</b></div>
-        </div>
+      <div class="chart">
+        <h3>🔀 Git 提交图</h3><div class="cap">gitGraph · build → ship → repeat</div>
+        <svg viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg">
+          <line x1="40" y1="35" x2="320" y2="35" stroke="#58a6ff" stroke-width="3"/>
+          <path d="M150 35 C150 80, 200 85, 230 85 L320 85" stroke="#a371f7" stroke-width="3" fill="none"/>
+          <g fill="#58a6ff"><circle cx="60" cy="35" r="6"/><circle cx="110" cy="35" r="6"/></g>
+          <g fill="#a371f7"><circle cx="230" cy="85" r="6"/><circle cx="270" cy="85" r="6"/></g>
+          <g fill="#f778ba"><circle cx="200" cy="35" r="6"/><circle cx="290" cy="35" r="6"/></g>
+          <g font-size="10" fill="#8b949e"><text x="52" y="20">想法</text><text x="185" y="20">merge v1.0</text><text x="280" y="105">上线</text></g>
+        </svg>
       </div>
-      <p>纯 CSS <code>conic-gradient</code> 画的，零外链；README 里对应 <code>pie</code> 图。</p>
-    </details>
 
-    <h2>📦 全部项目</h2>
-    <details><summary>🤖 AI &amp; 智能体 · 5</summary><p><a href="https://github.com/xkx121029/Phtomt">Phtomt</a> · <a href="https://github.com/xkx121029/AioShell">AioShell</a> · <a href="https://github.com/xkx121029/HappyBrowser">HappyBrowser</a> · <a href="https://github.com/xkx121029/happy_android_ai_see">happy_android_ai_see</a> · <a href="https://github.com/xkx121029/runtime-console">runtime-console</a></p></details>
-    <details><summary>🔧 自托管 / 基建 · 10</summary><p><a href="https://github.com/xkx121029/happy-search">happy-search</a> · <a href="https://github.com/xkx121029/happy-relay">happy-relay</a> · <a href="https://github.com/xkx121029/happy-one">happy-one</a> · <a href="https://github.com/xkx121029/wharf">wharf</a> · <a href="https://github.com/xkx121029/happy_html_puter">happy_html_puter</a> · <a href="https://github.com/xkx121029/happy-app-market">happy-app-market</a> · <a href="https://github.com/xkx121029/happy-cloud">happy-cloud</a> · <a href="https://github.com/xkx121029/happy-linux-win">happy-linux-win</a> · <a href="https://github.com/xkx121029/happy_yuankong">happy_yuankong</a> · <a href="https://github.com/xkx121029/xmtb">xmtb</a></p></details>
-    <details><summary>📱 Android / 客户端 · 5</summary><p><a href="https://github.com/xkx121029/HappyLook">HappyLook</a> · <a href="https://github.com/xkx121029/Clapper">Clapper</a> · <a href="https://github.com/xkx121029/happy_andorid_html_quickook">happy_andorid_html_quickook</a> · <a href="https://github.com/xkx121029/happy_potplayer">happy_potplayer</a> · <a href="https://github.com/xkx121029/baike_reformat">baike_reformat</a></p></details>
-    <details><summary>🖥 桌面 / 工具 · 6</summary><p><a href="https://github.com/xkx121029/happy_clean">happy_clean</a> · <a href="https://github.com/xkx121029/happy-whiteboard">happy-whiteboard</a> · <a href="https://github.com/xkx121029/happy_shurufa">happy_shurufa</a> · <a href="https://github.com/xkx121029/exam-bell">exam-bell</a> · <a href="https://github.com/xkx121029/kompose-studio">kompose-studio</a> · <a href="https://github.com/xkx121029/code-reel">code-reel</a></p></details>
-    <details><summary>🎮 3D / 小游戏 · 3</summary><p><a href="https://github.com/xkx121029/windfield-farm">windfield-farm</a> · <a href="https://github.com/xkx121029/ai-chuangguan">ai-chuangguan</a> · <a href="https://github.com/xkx121029/AI_car">AI_car</a></p></details>
-    <details><summary>🌐 Web / CMS · 1</summary><p><a href="https://github.com/xkx121029/happy_home">happy_home</a></p></details>
+      <div class="chart">
+        <h3>🎯 技术栈四象限</h3><div class="cap">quadrantChart</div>
+        <svg viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg">
+          <rect x="40" y="15" width="290" height="120" fill="#161b22" stroke="#30363d"/>
+          <line x1="185" y1="15" x2="185" y2="135" stroke="#30363d"/><line x1="40" y1="75" x2="330" y2="75" stroke="#30363d"/>
+          <g font-size="10" fill="#8b949e"><text x="46" y="28">深耕</text><text x="300" y="28">主力</text><text x="46" y="131">尝鲜</text><text x="296" y="131">顺手</text></g>
+          <g><circle cx="290" cy="35" r="6" fill="#58a6ff"/><circle cx="270" cy="45" r="6" fill="#a371f7"/><circle cx="250" cy="55" r="6" fill="#3fb950"/>
+          <circle cx="120" cy="100" r="6" fill="#f778ba"/><circle cx="95" cy="115" r="6" fill="#d29922"/></g>
+        </svg>
+      </div>
 
-    <h2>📫 找得到我</h2>
-    <div class="alert note"><div class="tag">Note</div>自托管、AI 基建、Android / 桌面、以及一切「能不能自己整一个」的话题，开 Issue 聊就行。</div>
-    <div class="contacts">
-      <a href="https://linshuxu.pages.dev">🌐 个人站</a>
-      <a href="https://space.bilibili.com/3546846012115408">📺 B 站</a>
-      <a href="https://qm.qq.com/q/e0EttbDdyU">💬 QQ 号</a>
+      <div class="chart">
+        <h3>📊 方向分布柱状图</h3><div class="cap">xychart-beta · bar + line</div>
+        <svg viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <rect x="45" y="45" width="34" height="85" rx="3" fill="#58a6ff"/>
+            <rect x="95" y="85" width="34" height="45" rx="3" fill="#a371f7"/>
+            <rect x="145" y="95" width="34" height="35" rx="3" fill="#3fb950"/>
+            <rect x="195" y="95" width="34" height="35" rx="3" fill="#d29922"/>
+            <rect x="245" y="115" width="34" height="15" rx="3" fill="#f778ba"/>
+            <rect x="295" y="130" width="34" height="5" rx="3" fill="#39c5cf"/>
+          </g>
+          <polyline points="62,45 112,85 162,95 212,95 262,115 312,130" fill="none" stroke="#e6edf3" stroke-width="2"/>
+          <g font-size="9" fill="#8b949e" text-anchor="middle"><text x="62" y="146">基建</text><text x="112" y="146">桌面</text><text x="162" y="146">AI</text><text x="212" y="146">客户端</text><text x="262" y="146">3D</text><text x="312" y="146">Web</text></g>
+        </svg>
+      </div>
+
+      <div class="chart">
+        <h3>🛤 心路旅程</h3><div class="cap">journey</div>
+        <svg viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg">
+          <g font-size="11">
+            <rect x="20" y="30" width="70" height="26" rx="13" fill="#3fb950"/><text x="55" y="47" fill="#fff" text-anchor="middle">冒想法</text>
+            <rect x="110" y="30" width="70" height="26" rx="13" fill="#d29922"/><text x="145" y="47" fill="#fff" text-anchor="middle">通宵 Demo</text>
+            <rect x="200" y="70" width="70" height="26" rx="13" fill="#a371f7"/><text x="235" y="87" fill="#fff" text-anchor="middle">抠 UI</text>
+            <rect x="285" y="30" width="70" height="26" rx="13" fill="#58a6ff"/><text x="320" y="47" fill="#fff" text-anchor="middle">有人 star</text>
+          </g>
+          <path d="M90 43 L110 43 M180 43 Q195 43 195 60 L200 83 M270 83 Q340 83 340 56" stroke="#484f58" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+        </svg>
+      </div>
+
+      <div class="chart full">
+        <h3>🧠 happy 宇宙 · 思维导图</h3><div class="cap">mindmap</div>
+        <svg viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg">
+          <rect x="330" y="57" width="140" height="36" rx="18" fill="#30363d" stroke="#8b949e"/>
+          <text x="400" y="80" fill="#fff" font-size="14" text-anchor="middle" font-weight="700">happy 宇宙</text>
+          <g stroke-width="2" fill="none"><path d="M330 75 Q280 75 250 30" stroke="#a371f7"/><path d="M330 75 Q280 75 250 120" stroke="#58a6ff"/>
+          <path d="M470 75 Q520 75 550 30" stroke="#3fb950"/><path d="M470 75 Q520 75 550 120" stroke="#f778ba"/></g>
+          <g font-size="12" text-anchor="middle">
+            <rect x="150" y="14" width="100" height="30" rx="8" fill="#6e40c9"/><text x="200" y="34" fill="#fff">给 AI 造工具</text>
+            <rect x="150" y="105" width="100" height="30" rx="8" fill="#1158c7"/><text x="200" y="125" fill="#fff">客户端全线</text>
+            <rect x="550" y="14" width="100" height="30" rx="8" fill="#116329"/><text x="600" y="34" fill="#fff">自托管</text>
+            <rect x="550" y="105" width="100" height="30" rx="8" fill="#9e2a6b"/><text x="600" y="125" fill="#fff">玩具</text>
+          </g>
+        </svg>
+      </div>
     </div>
+
+    <h2><span class="idx">04</span> 📊 数据 & 项目版图</h2>
+    <img src="./assets/streak.svg" alt="streak" style="max-width:100%;border-radius:8px">
+    <table>
+      <tr><th>方向</th><th>密度</th><th>数量</th><th>走势</th></tr>
+      <tr><td>🔧 自托管 / 基建</td><td class="meter">████████████████████</td><td class="num"><b>10</b></td><td class="spark">▁▂▃▅▆▇█▆</td></tr>
+      <tr><td>🖥 桌面 / 工具</td><td class="meter" style="color:var(--purple)">████████████░░░░░░░░</td><td class="num"><b>6</b></td><td class="spark">▂▄▆█▆▄▂</td></tr>
+      <tr><td>🤖 AI & 智能体</td><td class="meter" style="color:var(--green)">██████████░░░░░░░░░░</td><td class="num"><b>5</b></td><td class="spark">▁▃▅▇▅▃▁</td></tr>
+      <tr><td>📱 Android / 客户端</td><td class="meter" style="color:var(--amber)">██████████░░░░░░░░░░</td><td class="num"><b>5</b></td><td class="spark">▂▄▆▆▄▂▁</td></tr>
+      <tr><td>🎮 3D / 小游戏</td><td class="meter" style="color:var(--pink)">██████░░░░░░░░░░░░░░</td><td class="num"><b>3</b></td><td class="spark">▁▂▄▃▂▁▁</td></tr>
+      <tr><td>🌐 Web / CMS</td><td class="meter" style="color:var(--cyan)">██░░░░░░░░░░░░░░░░░░░░</td><td class="num"><b>1</b></td><td class="spark">▁▁▂▁▁▁▁</td></tr>
+    </table>
+    <div class="nums" id="nums">
+      <div class="num"><b data-to="30">0</b><span>开源项目</span></div>
+      <div class="num"><b data-to="0">0</b><span>fork</span></div>
+      <div class="num"><b data-to="10">0</b><span>Mermaid 图</span></div>
+      <div class="num"><b data-to="34">0</b><span>本地素材</span></div>
+    </div>
+
+    <h2><span class="idx">05</span> 📦 全部项目</h2>
+    <div class="alert tip">
+      <div class="tag">6 个方向 · 折叠展示</div>
+      🤖 AI & 智能体 5 · 🔧 自托管 / 基建 10 · 📱 Android / 客户端 5 · 🖥 桌面 / 工具 6 · 🎮 3D / 小游戏 3 · 🌐 Web / CMS 1
+    </div>
+
+    <h2><span class="idx">06</span> 📫 找得到我</h2>
+    <table><tr>
+      <td align="center"><a href="https://linshuxu.pages.dev"><b>🌐 个人站</b></a></td>
+      <td align="center"><a href="https://space.bilibili.com/3546846012115408"><b>📺 B 站</b></a></td>
+      <td align="center"><a href="https://qm.qq.com/q/e0EttbDdyU"><b>💬 QQ 号</b></a></td>
+    </tr></table>
 
     <footer>
-      ⚡ 30 repos · mostly named happy · all built from scratch.<br>
-      🟪 🟦 🟩 🟨 🟧 🟥　·　<kbd>build</kbd> <kbd>ship</kbd> <kbd>repeat</kbd>
+      <div>⚡ 30 repos · mostly named happy · all built from scratch.</div>
+      <div class="foot-emoji">🟪 🟦 🟩 🟨 🟧 🟥</div>
+      <div style="margin-top:8px"><kbd>build</kbd> <kbd>ship</kbd> <kbd>repeat</kbd></div>
     </footer>
 
   </div>
-
-  <p class="sub center" style="margin-top:18px">
-    本地效果预览（可离线打开）。README.md 用的全是 GitHub 原生能力：Alert、任务列表、<code>&lt;kbd&gt;</code>、
-    <code>&lt;picture&gt;</code> 明暗切换、Mermaid flowchart / pie、HTML 表格卡片墙。<br>
-    所有图片都在 <code>assets/</code>，每 6 小时由 GitHub Actions 自动重抓提交；动态图后的 <code>?v=</code> 是缓存版本号，别删。
-  </p>
 </div>
+
+<script>
+// 打字机（JS 版，配合 CSS 光标）
+const lines=['happy～happy～happy～','build → ship → repeat','自托管玩家 · 啥都自己整'];
+const el=document.getElementById('typeText');let li=0,ci=0,del=false;
+function type(){
+  const s=lines[li];
+  if(!del){ci++;el.textContent=s.slice(0,ci);if(ci>=s.length){del=true;return setTimeout(type,1400);}}
+  else{ci--;el.textContent=s.slice(0,ci);if(ci<=0){del=false;li=(li+1)%lines.length;}}
+  setTimeout(type,del?45:95);
+}type();
+
+// canvas 粒子网络
+const cv=document.getElementById('stars'),ctx=cv.getContext('2d');
+let W,H,pts=[];
+function init(){W=cv.width=innerWidth;H=cv.height=innerHeight;pts=Array.from({length:Math.min(90,W/14)},()=>({
+  x:Math.random()*W,y:Math.random()*W*0+Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.6+.4}));}
+init();addEventListener('resize',init);
+const mouse={x:-999,y:-999};addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  for(const p of pts){
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+    const dm=Math.hypot(p.x-mouse.x,p.y-mouse.y);
+    if(dm<140){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(mouse.x,mouse.y);ctx.strokeStyle='rgba(88,166,255,'+(1-dm/140)*.35+')';ctx.lineWidth=.8;ctx.stroke();}
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,7);ctx.fillStyle='rgba(163,113,247,.5)';ctx.fill();
+  }
+  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+    const a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+    if(d<110){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle='rgba(139,148,158,'+(1-d/110)*.11+')';ctx.lineWidth=.6;ctx.stroke();}
+  }
+  requestAnimationFrame(draw);
+}draw();
+
+// 滚动入场 + 数字滚动
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.classList.add('in');
+    e.target.querySelectorAll?.('[data-to]').forEach(n=>{
+      const to=+n.dataset.to;if(n.dataset.done)return;n.dataset.done=1;
+      let c=0;const step=Math.max(1,Math.ceil(to/30));const t=setInterval(()=>{c+=step;if(c>=to){c=to;clearInterval(t)}n.textContent=c},35);
+    });
+  }
+}),{threshold:.15});
+document.querySelectorAll('.chart,.reveal,#nums').forEach(n=>io.observe(n));
+</script>
 </body>
 </html>

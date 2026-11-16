@@ -26,7 +26,7 @@ const TOKEN = process.env.GITHUB_TOKEN || '';
 // 版本号同时用于 README 的 ?v= 缓存破坏，和 OG 图的缓存 key
 const STAMP = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 12);
 const ICONS = 'py,kotlin,js,ts,html,go,rust,cpp,cs,dart,vue,threejs,tauri,docker';
-const OG_REPOS = ['Phtomt', 'happy-search', 'happy-relay', 'AioShell', 'HappyLook'];
+const OG_REPOS = ['Phtomt', 'happy-search', 'happy-relay', 'AioShell', 'HappyLook', 'happy-cloud'];
 
 // README 中这些图片会被加上 ?v=STAMP，避免 GitHub 图片代理缓存旧内容
 const DYNAMIC_FILES = [
@@ -97,8 +97,8 @@ mkdirSync(ASSETS_DIR, { recursive: true });
 const tasks = [
   {
     name: 'streak.svg',
-    url: `https://streak-stats.demolab.com/?user=${USER}&t=${STAMP}`,
-    fallback: `https://streak-stats.demolab.com/?user=${USER}`,
+    url: `https://streak-stats.demolab.com/?user=${USER}&theme=radical&hide_border=true&t=${STAMP}`,
+    fallback: `https://streak-stats.demolab.com/?user=${USER}&theme=radical&hide_border=true`,
   },
   {
     name: 'visitors.svg',
@@ -160,9 +160,9 @@ const STATIC_BADGES = [
   ['badge-docker.svg', 'Docker-2496ED'], ['badge-tauri.svg', 'Tauri2-FFC131'],
 ];
 const STATIC_FILES = [
-  ['skillicons-dark.svg', `https://skillicons.dev/icons?i=${ICONS}&theme=dark`],
-  ['skillicons-light.svg', `https://skillicons.dev/icons?i=${ICONS}&theme=light`],
-  ['typing.svg', 'https://readme-typing-svg.demolab.com/?lines=happy~happy~happy~&center=true&size=24'],
+  ['skillicons-dark.svg', `https://skillicons.dev/icons?i=${ICONS}&theme=dark&perline=7`],
+  ['skillicons-light.svg', `https://skillicons.dev/icons?i=${ICONS}&theme=light&perline=7`],
+  ['typing.svg', 'https://readme-typing-svg.demolab.com/?lines=happy~happy~happy~;build%20ship%20repeat~;%E8%87%AA%E6%89%98%E7%AE%A1%E7%8E%A9%E5%AE%B6&center=true&size=26&color=58A6FF&font=Fira%20Code'],
   ...STATIC_BADGES.map(([f, label]) => [f, `https://img.shields.io/badge/${label}`]),
 ];
 let added = 0;
