@@ -1,6 +1,6 @@
 <p align="center">
   <img src="./assets/typing.svg" width="440" alt="happy~happy~happy~"><br>
-  <img src="./assets/avatar.jpg?v=202611152212" width="96" alt="avatar">
+  <img src="./assets/avatar.jpg?v=202611160329" width="96" alt="avatar">
 </p>
 
 <h1 align="center">👋 Hi, I'm xkx121029</h1>
@@ -8,13 +8,13 @@
 <p align="center"><b>happy～happy～happy～　·　自托管玩家　·　什么都想自己整一个</b></p>
 
 <p align="center">
-  <img src="./assets/badge-repos.svg?v=202611152212" alt="repos">
-  <img src="./assets/badge-forks.svg?v=202611152212" alt="forks">
-  <img src="./assets/badge-stars.svg?v=202611152212" alt="stars">
+  <img src="./assets/badge-repos.svg?v=202611160329" alt="repos">
+  <img src="./assets/badge-forks.svg?v=202611160329" alt="forks">
+  <img src="./assets/badge-stars.svg?v=202611160329" alt="stars">
   <img src="./assets/badge-starstruck.svg" alt="Starstruck x2">
   <img src="./assets/badge-dalian.svg" alt="Dalian">
   <img src="./assets/badge-self-hosted.svg" alt="self-hosted">
-  <img src="./assets/visitors.svg?v=202611152212" alt="profile views">
+  <img src="./assets/visitors.svg?v=202611160329" alt="profile views">
 </p>
 
 <p align="center">
@@ -44,7 +44,7 @@
 <table>
   <tr>
     <td width="50%" align="center" valign="top">
-      <a href="https://github.com/xkx121029/Phtomt"><img src="./assets/og-Phtomt.png?v=202611152212" width="370" alt="Phtomt 仓库官方预览卡"></a><br><br>
+      <a href="https://github.com/xkx121029/Phtomt"><img src="./assets/og-Phtomt.png?v=202611160329" width="370" alt="Phtomt 仓库官方预览卡"></a><br><br>
       <b>🤖 Happy Phone Agent</b><br><br>
       <img src="./assets/badge-kotlin.svg" alt="Kotlin">
       <img src="./assets/badge-android.svg" alt="Android">
@@ -75,21 +75,21 @@
 <table>
   <tr>
     <td align="center" width="50%">
-      <a href="https://github.com/xkx121029/happy-search"><img src="./assets/og-happy-search.png?v=202611152212" width="390" alt="happy-search"></a><br>
+      <a href="https://github.com/xkx121029/happy-search"><img src="./assets/og-happy-search.png?v=202611160329" width="390" alt="happy-search"></a><br>
       <b>🔍 happy-search</b> · <sub>多引擎聚合搜索 API</sub>
     </td>
     <td align="center" width="50%">
-      <a href="https://github.com/xkx121029/happy-relay"><img src="./assets/og-happy-relay.png?v=202611152212" width="390" alt="happy-relay"></a><br>
+      <a href="https://github.com/xkx121029/happy-relay"><img src="./assets/og-happy-relay.png?v=202611160329" width="390" alt="happy-relay"></a><br>
       <b>🔁 happy-relay</b> · <sub>OpenAI 兼容模型中转</sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="50%">
-      <a href="https://github.com/xkx121029/AioShell"><img src="./assets/og-AioShell.png?v=202611152212" width="390" alt="AioShell"></a><br>
+      <a href="https://github.com/xkx121029/AioShell"><img src="./assets/og-AioShell.png?v=202611160329" width="390" alt="AioShell"></a><br>
       <b>🐚 AioShell</b> · <sub>带 MCP / ACP 的工作区</sub>
     </td>
     <td align="center" width="50%">
-      <a href="https://github.com/xkx121029/HappyLook"><img src="./assets/og-HappyLook.png?v=202611152212" width="390" alt="HappyLook"></a><br>
+      <a href="https://github.com/xkx121029/HappyLook"><img src="./assets/og-HappyLook.png?v=202611160329" width="390" alt="HappyLook"></a><br>
       <b>👀 HappyLook</b> · <sub>客户端方向</sub>
     </td>
   </tr>
@@ -129,7 +129,7 @@
 
 ## 📊 数据 & 项目版图
 
-<img src="./assets/streak.svg?v=202611152212" alt="GitHub contribution streak">
+<img src="./assets/streak.svg?v=202611160329" alt="GitHub contribution streak">
 
 | 方向 | 密度 | 数量 |
 | :--- | :--- | ---: |
