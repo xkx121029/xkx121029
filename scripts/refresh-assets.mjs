@@ -26,7 +26,7 @@ const TOKEN = process.env.GITHUB_TOKEN || '';
 // 版本号同时用于 README 的 ?v= 缓存破坏，和 OG 图的缓存 key
 const STAMP = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 12);
 const ICONS = 'py,kotlin,js,ts,html,go,rust,cpp,cs,dart,vue,threejs,tauri,docker';
-const OG_REPOS = ['Phtomt', 'happy-search', 'happy-relay', 'AioShell', 'HappyLook', 'happy-cloud'];
+const OG_REPOS = ['Phtomt', 'happy-search', 'happy-relay', 'AioShell', 'HappyLook', 'happy-cloud', 'HappyClaw'];
 
 // README 中这些图片会被加上 ?v=STAMP，避免 GitHub 图片代理缓存旧内容
 const DYNAMIC_FILES = [
@@ -158,6 +158,7 @@ const STATIC_BADGES = [
   ['badge-starstruck.svg', 'Starstruck%20x2-f778ba'], ['badge-dalian.svg', 'Dalian-39c5cf'],
   ['badge-self-hosted.svg', 'self-hosted-238636'], ['badge-mcp.svg', 'MCP%20ACP-6f42c1'],
   ['badge-docker.svg', 'Docker-2496ED'], ['badge-tauri.svg', 'Tauri2-FFC131'],
+  ['badge-mit.svg', 'MIT-yellow'],
 ];
 const STATIC_FILES = [
   ['skillicons-dark.svg', `https://skillicons.dev/icons?i=${ICONS}&theme=dark&perline=7`],

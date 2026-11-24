@@ -8,17 +8,17 @@
 
 <p align="center">
   <a href="https://github.com/xkx121029/Phtomt"><img src="./assets/badge-large-phone.svg" alt="Happy Phone Agent"></a>
-  <img src="./assets/badge-large-claw.svg" alt="HappyClaw">
+  <a href="https://github.com/xkx121029/HappyClaw"><img src="./assets/badge-large-claw.svg" alt="HappyClaw"></a>
 </p>
 
 <p align="center">
-  <img src="./assets/badge-repos.svg?v=202611231641" alt="repos">
-  <img src="./assets/badge-forks.svg?v=202611231641" alt="forks">
-  <img src="./assets/badge-stars.svg?v=202611231641" alt="stars">
+  <img src="./assets/badge-repos.svg?v=202611241333" alt="repos">
+  <img src="./assets/badge-forks.svg?v=202611241333" alt="forks">
+  <img src="./assets/badge-stars.svg?v=202611241333" alt="stars">
   <img src="./assets/badge-starstruck.svg" alt="Starstruck x2">
   <img src="./assets/badge-dalian.svg" alt="Dalian">
   <img src="./assets/badge-self-hosted.svg" alt="self-hosted">
-  <img src="./assets/visitors.svg?v=202611231641" alt="profile views">
+  <img src="./assets/visitors.svg?v=202611241333" alt="profile views">
 </p>
 
 <p align="center">
@@ -34,10 +34,10 @@
 
 > [!IMPORTANT]
 > ### 🚀 NOW
-> **Happy Phone Agent** 已开源，正在打磨；**HappyClaw** 在整，路上。
+> **Happy Phone Agent** 已开源，正在打磨；**HappyClaw** 也开源了，MIT。
 >
 > - [x] `Phtomt` → 能自己操控手机的 Android AI 智能体
-> - [ ] `HappyClaw` → 下一个主推，仓库还没公开
+> - [x] `HappyClaw` → 自托管、可插拔的 AI 助手运行时（MIT）
 >
 > <sub>偏好很固定：<kbd>零依赖</kbd> <kbd>单文件</kbd> <kbd>双击即玩</kbd> <kbd>自己能托管</kbd></sub>
 
@@ -48,7 +48,7 @@
 <table>
   <tr>
     <td width="50%" align="center" valign="top">
-      <a href="https://github.com/xkx121029/Phtomt"><img src="./assets/og-Phtomt.png?v=202611231641" width="370" alt="Phtomt 仓库官方预览卡"></a><br><br>
+      <a href="https://github.com/xkx121029/Phtomt"><img src="./assets/og-Phtomt.png?v=202611241333" width="370" alt="Phtomt 仓库官方预览卡"></a><br><br>
       <b>🤖 Happy Phone Agent</b><br><br>
       <img src="./assets/badge-kotlin.svg" alt="Kotlin">
       <img src="./assets/badge-android.svg" alt="Android">
@@ -57,15 +57,13 @@
       <a href="https://github.com/xkx121029/Phtomt"><b>→ 打开仓库</b></a>
     </td>
     <td width="50%" align="center" valign="top">
-      <br><br><br>
+      <a href="https://github.com/xkx121029/HappyClaw"><img src="./assets/og-HappyClaw.png?v=202611241333" width="370" alt="HappyClaw 仓库官方预览卡"></a><br><br>
       <b>🦀 HappyClaw</b><br><br>
-      <img src="./assets/badge-wip.svg" alt="WIP">
-      <img src="./assets/badge-coming-soon.svg" alt="Coming Soon"><br><br>
-      <sub>下一个主推项目 · 正在整</sub><br><br>
-      <b>先占位，不编链接</b><br>
-      <sub>GitHub 上暂时查不到公开仓库，开源了立刻补上真实地址</sub><br><br>
-      🧩 ⚙️ 🛠️ 🧠 🔧
-      <br><br><br><br><br><br>
+      <img src="./assets/badge-python.svg" alt="Python">
+      <img src="./assets/badge-self-hosted.svg" alt="self-hosted">
+      <img src="./assets/badge-mit.svg" alt="MIT"><br><br>
+      自托管、可插拔的 AI 助手运行时，MIT 协议。<br><br>
+      <a href="https://github.com/xkx121029/HappyClaw"><b>→ 打开仓库</b></a>
     </td>
   </tr>
 </table>
@@ -79,21 +77,21 @@
 <table>
   <tr>
     <td align="center" width="50%">
-      <a href="https://github.com/xkx121029/happy-search"><img src="./assets/og-happy-search.png?v=202611231641" width="390" alt="happy-search"></a><br>
+      <a href="https://github.com/xkx121029/happy-search"><img src="./assets/og-happy-search.png?v=202611241333" width="390" alt="happy-search"></a><br>
       <b>🔍 happy-search</b> · <sub>多引擎聚合搜索 API</sub>
     </td>
     <td align="center" width="50%">
-      <a href="https://github.com/xkx121029/happy-relay"><img src="./assets/og-happy-relay.png?v=202611231641" width="390" alt="happy-relay"></a><br>
+      <a href="https://github.com/xkx121029/happy-relay"><img src="./assets/og-happy-relay.png?v=202611241333" width="390" alt="happy-relay"></a><br>
       <b>🔁 happy-relay</b> · <sub>OpenAI 兼容模型中转</sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="50%">
-      <a href="https://github.com/xkx121029/AioShell"><img src="./assets/og-AioShell.png?v=202611231641" width="390" alt="AioShell"></a><br>
+      <a href="https://github.com/xkx121029/AioShell"><img src="./assets/og-AioShell.png?v=202611241333" width="390" alt="AioShell"></a><br>
       <b>🐚 AioShell</b> · <sub>带 MCP / ACP 的工作区</sub>
     </td>
     <td align="center" width="50%">
-      <a href="https://github.com/xkx121029/happy-cloud"><img src="./assets/og-happy-cloud.png?v=202611231641" width="390" alt="happy-cloud"></a><br>
+      <a href="https://github.com/xkx121029/happy-cloud"><img src="./assets/og-happy-cloud.png?v=202611241333" width="390" alt="happy-cloud"></a><br>
       <b>☁️ happy-cloud</b> · <sub>私有云盘</sub>
     </td>
   </tr>
@@ -103,7 +101,7 @@
 
 ## 👋 关于我
 
-大连，一个人把想法从 0 整到能跑。30 个开源项目，几乎全是从零起的，**名字基本都以 happy 开头**。
+大连，一个人把想法从 0 整到能跑。36 个开源项目，几乎全是从零起的，**名字基本都以 happy 开头**。
 
 > [!TIP]
 > **「能不能自己整一个？」——能，就整了。**
@@ -199,15 +197,15 @@ quadrantChart
 </details>
 
 <details>
-<summary>📊 柱状图 + 折线 · 30 个项目的方向分布</summary>
+<summary>📊 柱状图 + 折线 · 36 个项目的方向分布</summary>
 
 ```mermaid
 xychart-beta
-    title "30 个开源项目 · 方向分布"
+    title "36 个开源项目 · 方向分布"
     x-axis ["基建", "桌面", "AI", "客户端", "3D", "Web"]
     y-axis "项目数" 0 --> 12
-    bar [10, 6, 5, 5, 3, 1]
-    line [10, 6, 5, 5, 3, 1]
+    bar [10, 6, 10, 5, 3, 2]
+    line [10, 6, 10, 5, 3, 2]
 ```
 
 </details>
@@ -295,30 +293,31 @@ sankey-beta
 
 ## 📊 数据 & 项目版图
 
-<img src="./assets/streak.svg?v=202611231641" alt="GitHub contribution streak">
+<img src="./assets/streak.svg?v=202611241333" alt="GitHub contribution streak">
 
 | 方向 | 密度 | 数量 | 走势 |
 | :--- | :--- | ---: | :--- |
 | 🔧 自托管 / 基建 | `████████████████████` | **10** | `▁▂▃▅▆▇█▆` |
 | 🖥 桌面 / 工具 | `████████████░░░░░░░░` | **6** | `▂▄▆█▆▄▂` |
-| 🤖 AI & 智能体 | `██████████░░░░░░░░░░` | **5** | `▁▃▅▇▅▃▁` |
+| 🤖 AI & 智能体 | `██████████` | **10** | `▁▃▅▇█▇▅` |
 | 📱 Android / 客户端 | `██████████░░░░░░░░░░` | **5** | `▂▄▆▆▄▂▁` |
 | 🎮 3D / 小游戏 | `██████░░░░░░░░░░░░░░` | **3** | `▁▂▄▃▂▁▁` |
-| 🌐 Web / CMS | `██░░░░░░░░░░░░░░░░░░░░` | **1** | `▁▁▂▁▁▁▁` |
+| 🌐 Web / CMS | `████░░░░░░░░░░░░░░░░░░` | **2** | `▁▁▂▃▂▁▁` |
 
 <details>
 <summary>🗺 项目版图（Mermaid flowchart）</summary>
 
 ```mermaid
 flowchart TB
-  ME(["🧑‍💻 xkx121029<br/>30 repos · 0 fork"]):::me
-  ME --> AI["🤖 AI & 智能体<br/>5"]:::ai
+  ME(["🧑‍💻 xkx121029<br/>36 repos · 0 fork"]):::me
+  ME --> AI["🤖 AI & 智能体<br/>10"]:::ai
   ME --> INFRA["🔧 自托管 / 基建<br/>10"]:::infra
   ME --> MOB["📱 Android / 客户端<br/>5"]:::mob
   ME --> DESK["🖥 桌面 / 工具<br/>6"]:::desk
   ME --> GAME["🎮 3D / 小游戏<br/>3"]:::game
-  ME --> WEB["🌐 Web / CMS<br/>1"]:::web
+  ME --> WEB["🌐 Web / CMS<br/>2"]:::web
   AI --> NOW1("🚀 Happy Phone Agent"):::hot
+  AI --> NOW3("🦀 HappyClaw"):::hot
   INFRA --> NOW2("happy-search · happy-relay"):::hot
   classDef me fill:#30363d,stroke:#8b949e,stroke-width:2px,color:#fff
   classDef ai fill:#6e40c9,stroke:#a371f7,color:#fff
@@ -336,13 +335,13 @@ flowchart TB
 <summary>🥧 展开看方向占比（Mermaid 饼图）</summary>
 
 ```mermaid
-pie title 30 个开源项目 · 方向分布
+pie title 36 个开源项目 · 方向分布
     "自托管 / 基建" : 10
     "桌面 / 工具" : 6
-    "AI & 智能体" : 5
+    "AI & 智能体" : 10
     "Android / 客户端" : 5
     "3D / 小游戏" : 3
-    "Web / CMS" : 1
+    "Web / CMS" : 2
 ```
 
 </details>
@@ -352,9 +351,9 @@ pie title 30 个开源项目 · 方向分布
 ## 📦 全部项目
 
 <details>
-<summary>🤖 AI & 智能体 · 5</summary>
+<summary>🤖 AI & 智能体 · 10</summary>
 
-[Phtomt](https://github.com/xkx121029/Phtomt) · [AioShell](https://github.com/xkx121029/AioShell) · [HappyBrowser](https://github.com/xkx121029/HappyBrowser) · [happy_android_ai_see](https://github.com/xkx121029/happy_android_ai_see) · [runtime-console](https://github.com/xkx121029/runtime-console)
+[Phtomt](https://github.com/xkx121029/Phtomt) · [HappyClaw](https://github.com/xkx121029/HappyClaw) · [happyclaw-gateway](https://github.com/xkx121029/happyclaw-gateway) · [happyclaw-harness](https://github.com/xkx121029/happyclaw-harness) · [happyclaw-memory](https://github.com/xkx121029/happyclaw-memory) · [happyclaw-browser](https://github.com/xkx121029/happyclaw-browser) · [AioShell](https://github.com/xkx121029/AioShell) · [HappyBrowser](https://github.com/xkx121029/HappyBrowser) · [happy_android_ai_see](https://github.com/xkx121029/happy_android_ai_see) · [runtime-console](https://github.com/xkx121029/runtime-console)
 
 </details>
 
@@ -387,13 +386,13 @@ pie title 30 个开源项目 · 方向分布
 </details>
 
 <details>
-<summary>🌐 Web / CMS · 1</summary>
+<summary>🌐 Web / CMS · 2</summary>
 
-[happy_home](https://github.com/xkx121029/happy_home)
+[happy_home](https://github.com/xkx121029/happy_home) · [wharf](https://github.com/xkx121029/wharf)
 
 </details>
 
-<sub>🎯 主推另见上方双卡：Happy Phone Agent / Phtomt · HappyClaw（仓库待补）</sub>
+<sub>🎯 主推另见上方双卡：Happy Phone Agent / Phtomt · HappyClaw</sub>
 
 ---
 
@@ -414,7 +413,7 @@ pie title 30 个开源项目 · 方向分布
 
 <div align="center">
 
-<sub>⚡ 30 repos · mostly named happy · all built from scratch.</sub><br>
+<sub>⚡ 36 repos · mostly named happy · all built from scratch.</sub><br>
 <sub>🟪 🟦 🟩 🟨 🟧 🟥　·　<kbd>build</kbd> <kbd>ship</kbd> <kbd>repeat</kbd></sub>
 
 </div>
@@ -432,12 +431,12 @@ pie title 30 个开源项目 · 方向分布
   在 GitHub Actions 的境外 runner 上执行 scripts/refresh-assets.mjs：
     - 调 GitHub API 拿实时仓库数 / fork 数 / star 总数 -> 重生成 3 张数字徽章
     - 重抓 streak（radical 主题）、komarev 访客计数、GitHub 官方头像
-    - 重抓 6 张官方仓库 OG 封面（含 happy-cloud，URL 带时间戳破缓存）
+    - 重抓 7 张官方仓库 OG 封面（含 happy-cloud / HappyClaw，URL 带时间戳破缓存）
     - 内容有变化才写盘并提交；下载失败保留上一次成功的图片
     - 静态素材（双行图标条 / 三行打字机 / for-the-badge 徽章）只在缺失时补齐，URL 已同步新版
     - 图片后的 ?v= 是脚本维护的缓存版本号，用于破 GitHub 图片代理缓存，请勿手动删除
 
-  【人工维护】正文里的「30 个项目」、分组数字（5/10/5/6/3/1）、字符进度条、sparkline
+  【人工维护】正文里的「36 个项目」、分组数字（10/10/5/6/3/2）、字符进度条、sparkline
   与所有 Mermaid 图里的数据都是同一份分类快照，脚本不改正文文字，只更新徽章数字和图片。
 
   上线：把本目录全部内容（含 assets/、scripts/、.github/）作为 xkx121029/xkx121029 仓库根目录推送。
