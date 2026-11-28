@@ -27,7 +27,6 @@
     <source media="(prefers-color-scheme: light)" srcset="./assets/skillicons-light.svg">
     <img src="./assets/skillicons-dark.svg" width="560" alt="Python Kotlin JavaScript TypeScript HTML Go Rust C++ C# Dart Vue Three.js Tauri Docker">
   </picture><br>
-  <sub>↑ 双行图标条 · 跟着 GitHub 亮 / 暗主题自动换色</sub>
 </p>
 
 ---
@@ -39,7 +38,6 @@
 > - [x] `Phtomt` → 能自己操控手机的 Android AI 智能体
 > - [x] `HappyClaw` → 自托管、可插拔的 AI 助手运行时（MIT）
 >
-> <sub>偏好很固定：<kbd>零依赖</kbd> <kbd>单文件</kbd> <kbd>双击即玩</kbd> <kbd>自己能托管</kbd></sub>
 
 ---
 
@@ -67,8 +65,6 @@
     </td>
   </tr>
 </table>
-
-<sub>封面是 GitHub 官方生成的仓库社交预览卡（含描述 / star / fork），点图直达仓库，每 6 小时自动刷新。</sub>
 
 ---
 
@@ -101,10 +97,10 @@
 
 ## 👋 关于我
 
-大连，一个人把想法从 0 整到能跑。36 个开源项目，几乎全是从零起的，**名字基本都以 happy 开头**。
+大连，一个人把想法从 0 整到开源。
 
 > [!TIP]
-> **「能不能自己整一个？」——能，就整了。**
+> **「我去这个行啊？」——做一下试试。**
 
 - 🧠 **给 AI 造工具**：自托管搜索 API（14 引擎聚合 + RRF 融合排序）、OpenAI 兼容模型中转、内置 MCP / ACP 的网盘工作区、能自己操控手机的 Android 智能体
 - 📱 **客户端全线**：Kotlin / Jetpack Compose、C# / WPF、Tauri 2 + Vue、Flutter、纯 Rust 写的 Windows TSF 编程输入法
@@ -128,10 +124,6 @@
 | **代码工具** | Compose 源码 → 统一 IR → 浏览器渲染、代码 → 编写动画 → 导出视频 |
 
 ---
-
-> [!NOTE]
-> ### 🎨 程序化图表长廊
-> 下面这些**全是 GitHub 原生 Mermaid 矢量图**——由代码和数据生成，跟着明暗主题变色，不是图片、不会裂、放大不糊。点开折叠逐个看。
 
 <details open>
 <summary>🕰 时间线 · 一个 happy 项目是怎么诞生的</summary>
@@ -172,8 +164,7 @@ gitGraph
 
 </details>
 
-<details>
-<summary>🎯 四象限 · 技术栈坐标</summary>
+
 
 ```mermaid
 quadrantChart
@@ -196,8 +187,7 @@ quadrantChart
 
 </details>
 
-<details>
-<summary>📊 柱状图 + 折线 · 36 个项目的方向分布</summary>
+
 
 ```mermaid
 xychart-beta
@@ -275,7 +265,6 @@ journey
 </details>
 
 <details>
-<summary>🌊 桑基图 · 技术栈流向</summary>
 
 ```mermaid
 sankey-beta
@@ -332,7 +321,6 @@ flowchart TB
 </details>
 
 <details>
-<summary>🥧 展开看方向占比（Mermaid 饼图）</summary>
 
 ```mermaid
 pie title 36 个开源项目 · 方向分布
