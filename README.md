@@ -164,7 +164,8 @@ gitGraph
 
 </details>
 
-
+<details>
+<summary>🎯 四象限 · 技术栈坐标</summary>
 
 ```mermaid
 quadrantChart
@@ -187,7 +188,8 @@ quadrantChart
 
 </details>
 
-
+<details>
+<summary>📊 柱状图 + 折线 · 36 个项目的方向分布</summary>
 
 ```mermaid
 xychart-beta
@@ -266,6 +268,7 @@ journey
 
 <details>
 
+<summary>🌊 桑基图 · 技术栈流向</summary>
 ```mermaid
 sankey-beta
     Python,自托管基建,8
